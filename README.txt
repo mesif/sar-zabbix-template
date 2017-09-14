@@ -33,7 +33,7 @@ Follow these few steps:
     
 3. Check all to be working
     As you know, sa1 collector is run periodically by cron daemon.
-    So check if cron is working:
+    So check if cron is working (according to your initialization system):
     # service cron status
     # /etc/init.d/crond status
     # systemctl status crond
@@ -80,7 +80,7 @@ Follow these few steps:
     
     Then you should change update interval for every item in the template.
 
-
+Now you are ready to import sar_zabbix_template.xml into your Zabbix.
 
 Have a nice day.
 
