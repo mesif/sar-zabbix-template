@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>3.4</version>
-    <date>2017-09-15T03:22:35Z</date>
+    <date>2018-08-21T13:25:27Z</date>
     <groups>
         <group>
             <name>Linux servers</name>
@@ -5777,12 +5777,16 @@ last(&quot;sar.counter[n,EDEV,{#COUNTER},txfifo/s]&quot;)</params>
                     <value>95</value>
                 </macro>
                 <macro>
+                    <macro>{$SAR_MEM_OVERCOMMIT}</macro>
+                    <value>100</value>
+                <value>100</value>
+                <macro>
                     <macro>{$SAR_NET_ERR_THRESHOLD}</macro>
                     <value>0</value>
                 </macro>
                 <macro>
                     <macro>{$SAR_PATH}</macro>
-                    <value>/var/log/sysstat</value>
+                    <value>/var/log/sa</value>
                 </macro>
                 <macro>
                     <macro>{$SAR_SWP_CRIT}</macro>
@@ -5899,7 +5903,7 @@ last(&quot;sar.counter[n,EDEV,{#COUNTER},txfifo/s]&quot;)</params>
             <tags/>
         </trigger>
         <trigger>
-            <expression>{Sar Template:sar.counter[r,,,%commit].avg(#3)}&gt;100</expression>
+            <expression>{Sar Template:sar.counter[r,,,%commit].avg(#3)}&gt;{$SAR_MEM_OVERCOMMIT}</expression>
             <recovery_mode>0</recovery_mode>
             <recovery_expression/>
             <name>sar: mem: memory overcommit</name>
