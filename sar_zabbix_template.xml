@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>3.4</version>
-    <date>2018-08-31T10:23:20Z</date>
+    <date>2018-08-31T12:33:30Z</date>
     <groups>
         <group>
             <name>Linux servers</name>
@@ -5927,7 +5927,7 @@ vm.overcommit_ratio</description>
             <tags/>
         </trigger>
         <trigger>
-            <expression>{Sar Template:sar.counter[B,,,majflt/s].avg(#3)} / {Sar Template:sar.counter[B,,,pgpgout/s].avg(#3)} * 100 &gt; {$SAR_MEM_MJFT_HIGH}</expression>
+            <expression>{Sar Template:sar.counter[B,,,majflt/s].avg(#3)} / {Sar Template:sar.counter[B,,,pgpgin/s].avg(#3)} * 100 &gt; {$SAR_MEM_MJFT_HIGH}</expression>
             <recovery_mode>0</recovery_mode>
             <recovery_expression/>
             <name>sar: mem: swapping activity</name>
@@ -5936,7 +5936,7 @@ vm.overcommit_ratio</description>
             <url/>
             <status>0</status>
             <priority>3</priority>
-            <description>High swapping activity means, that sufficient part of pages was sent out to storage backend due to major faults.</description>
+            <description>High swapping activity means, that sufficient part of pages was loaded from storage backend due to major faults.</description>
             <type>0</type>
             <manual_close>0</manual_close>
             <dependencies/>
