@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>3.4</version>
-    <date>2018-09-27T19:02:55Z</date>
+    <date>2018-09-27T19:20:22Z</date>
     <groups>
         <group>
             <name>Linux servers</name>
@@ -6288,7 +6288,24 @@ Note: On SMP machines a processor that does not have any activity at all (0.00 f
                             <master_item_prototype/>
                         </item_prototype>
                     </item_prototypes>
-                    <trigger_prototypes/>
+                    <trigger_prototypes>
+                        <trigger_prototype>
+                            <expression>{Sar Template:sar.counter[u,ALL -P ALL,{#COUNTER},%iowait].avg(#3)} &gt; {$SAR_IO_WAIT_CPU_STUCK}</expression>
+                            <recovery_mode>0</recovery_mode>
+                            <recovery_expression/>
+                            <name>sar: cpu: stuck on io wait ({#COUNTER})</name>
+                            <correlation_mode>0</correlation_mode>
+                            <correlation_tag/>
+                            <url/>
+                            <status>0</status>
+                            <priority>3</priority>
+                            <description/>
+                            <type>0</type>
+                            <manual_close>0</manual_close>
+                            <dependencies/>
+                            <tags/>
+                        </trigger_prototype>
+                    </trigger_prototypes>
                     <graph_prototypes/>
                     <host_prototypes/>
                     <jmx_endpoint/>
@@ -6327,6 +6344,10 @@ Note: On SMP machines a processor that does not have any activity at all (0.00 f
                 <macro>
                     <macro>{$SAR_IO_READ_THRESHOLD}</macro>
                     <value>1024</value>
+                </macro>
+                <macro>
+                    <macro>{$SAR_IO_WAIT_CPU_STUCK}</macro>
+                    <value>90</value>
                 </macro>
                 <macro>
                     <macro>{$SAR_IO_WAIT_CRIT}</macro>
@@ -6533,7 +6554,7 @@ Works only with fresh versions of sar, where memused calculated as &quot;total i
             <tags/>
         </trigger>
         <trigger>
-            <expression>{Sar Template:sar.counter[r,,,%memused].avg(#3)}&gt;{$SAR_MEM_CRIT}</expression>
+            <expression>{Sar Template:sar.counter[r,,,%memused].last()}&gt;{$SAR_MEM_CRIT}</expression>
             <recovery_mode>0</recovery_mode>
             <recovery_expression/>
             <name>sar: mem: memory lack</name>
