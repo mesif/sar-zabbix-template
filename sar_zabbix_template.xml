@@ -6395,7 +6395,7 @@ Note: On SMP machines a processor that does not have any activity at all (0.00 f
                 </macro>
                 <macro>
                     <macro>{$SAR_TEMP_CRIT}</macro>
-                    <value>50</value>
+                    <value>60</value>
                 </macro>
             </macros>
             <templates/>
