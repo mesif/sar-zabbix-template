@@ -6370,10 +6370,6 @@ Note: On SMP machines a processor that does not have any activity at all (0.00 f
                     <value>95</value>
                 </macro>
                 <macro>
-                    <macro>{$SAR_MEM_MJFT_HIGH}</macro>
-                    <value>10</value>
-                </macro>
-                <macro>
                     <macro>{$SAR_MEM_OVERCOMMIT}</macro>
                     <value>100</value>
                 </macro>
@@ -6585,22 +6581,6 @@ But some applications may catch failure at some moment.&#13;
 See this variables:&#13;
 vm.overcommit_memory&#13;
 vm.overcommit_ratio</description>
-            <type>0</type>
-            <manual_close>0</manual_close>
-            <dependencies/>
-            <tags/>
-        </trigger>
-        <trigger>
-            <expression>{Sar Template:sar.counter[B,,,majflt/s].avg(#3)} / {Sar Template:sar.counter[B,,,pgpgin/s].avg(#3)} * 100 &gt; {$SAR_MEM_MJFT_HIGH}</expression>
-            <recovery_mode>0</recovery_mode>
-            <recovery_expression/>
-            <name>sar: mem: swapping activity</name>
-            <correlation_mode>0</correlation_mode>
-            <correlation_tag/>
-            <url/>
-            <status>0</status>
-            <priority>3</priority>
-            <description>High swapping activity means, that sufficient part of pages was loaded from storage backend due to major faults.</description>
             <type>0</type>
             <manual_close>0</manual_close>
             <dependencies/>
