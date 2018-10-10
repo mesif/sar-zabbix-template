@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>4.0</version>
-    <date>2018-10-03T18:59:08Z</date>
+    <date>2018-10-10T18:28:55Z</date>
     <groups>
         <group>
             <name>Linux servers</name>
@@ -986,15 +986,15 @@
                     <master_item/>
                 </item>
                 <item>
-                    <name>sar: power: cpu: Frequency</name>
+                    <name>sar: power: cpu: freq</name>
                     <type>0</type>
                     <snmp_community/>
                     <snmp_oid/>
-                    <key>sar.counter[m,,,MHz]</key>
+                    <key>sar.counter[m,CPU,,MHz]</key>
                     <delay>10m</delay>
                     <history>90d</history>
                     <trends>365d</trends>
-                    <status>1</status>
+                    <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
                     <units>MHz</units>
@@ -1013,8 +1013,7 @@
                     <publickey/>
                     <privatekey/>
                     <port/>
-                    <description>Instantaneous CPU clock frequency in MHz.&#13;
-Forced to use the slow -A key because sadf has no -m key implementation.</description>
+                    <description>Instantaneous CPU clock frequency in MHz.</description>
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
@@ -3350,6 +3349,65 @@ Forced to use the slow -A key because sadf has no -m key implementation.</descri
                     <master_item/>
                 </item>
                 <item>
+                    <name>sar: cpu: tasks num</name>
+                    <type>0</type>
+                    <snmp_community/>
+                    <snmp_oid/>
+                    <key>sar.counter[q,,,plist-sz]</key>
+                    <delay>10m</delay>
+                    <history>90d</history>
+                    <trends>365d</trends>
+                    <status>0</status>
+                    <value_type>0</value_type>
+                    <allowed_hosts/>
+                    <units>tasks</units>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description>Number of tasks in the task list.</description>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>sar-cpu</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
+                    <preprocessing/>
+                    <jmx_endpoint/>
+                    <timeout>3s</timeout>
+                    <url/>
+                    <query_fields/>
+                    <posts/>
+                    <status_codes>200</status_codes>
+                    <follow_redirects>1</follow_redirects>
+                    <post_type>0</post_type>
+                    <http_proxy/>
+                    <headers/>
+                    <retrieve_mode>0</retrieve_mode>
+                    <request_method>0</request_method>
+                    <output_format>0</output_format>
+                    <allow_traps>0</allow_traps>
+                    <ssl_cert_file/>
+                    <ssl_key_file/>
+                    <ssl_key_password/>
+                    <verify_peer>0</verify_peer>
+                    <verify_host>0</verify_host>
+                    <master_item/>
+                </item>
+                <item>
                     <name>sar: cpu: run queue</name>
                     <type>0</type>
                     <snmp_community/>
@@ -5371,7 +5429,7 @@ Note: On SMP machines a processor that does not have any activity at all (0.00 f
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
-                    <units>tasks/s</units>
+                    <units>swch/s</units>
                     <snmpv3_contextname/>
                     <snmpv3_securityname/>
                     <snmpv3_securitylevel>0</snmpv3_securitylevel>
@@ -5408,7 +5466,7 @@ Note: On SMP machines a processor that does not have any activity at all (0.00 f
                     <http_proxy/>
                     <headers/>
                     <retrieve_mode>0</retrieve_mode>
-                    <request_method>1</request_method>
+                    <request_method>0</request_method>
                     <output_format>0</output_format>
                     <allow_traps>0</allow_traps>
                     <ssl_cert_file/>
@@ -5569,6 +5627,66 @@ Note: On SMP machines a processor that does not have any activity at all (0.00 f
                     <applications>
                         <application>
                             <name>sar-swp</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
+                    <preprocessing/>
+                    <jmx_endpoint/>
+                    <timeout>3s</timeout>
+                    <url/>
+                    <query_fields/>
+                    <posts/>
+                    <status_codes>200</status_codes>
+                    <follow_redirects>1</follow_redirects>
+                    <post_type>0</post_type>
+                    <http_proxy/>
+                    <headers/>
+                    <retrieve_mode>0</retrieve_mode>
+                    <request_method>1</request_method>
+                    <output_format>0</output_format>
+                    <allow_traps>0</allow_traps>
+                    <ssl_cert_file/>
+                    <ssl_key_file/>
+                    <ssl_key_password/>
+                    <verify_peer>0</verify_peer>
+                    <verify_host>0</verify_host>
+                    <master_item/>
+                </item>
+                <item>
+                    <name>sar: cpu: tasks latency</name>
+                    <type>15</type>
+                    <snmp_community/>
+                    <snmp_oid/>
+                    <key>sar.cpu.lat[]</key>
+                    <delay>10m</delay>
+                    <history>90d</history>
+                    <trends>365d</trends>
+                    <status>0</status>
+                    <value_type>0</value_type>
+                    <allowed_hosts/>
+                    <units>µs</units>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <params>last(&quot;sar.counter[w,,,cswch/s]&quot;) * {$SAR_CPU_LAT_CONST_CSWCH_PROC_CYCL} / last(&quot;sar.counter[m,CPU,,MHz]&quot;) / last(&quot;system.cpu.num[]&quot;) + &#13;
+last(&quot;sar.counter[q,,,runq-sz]&quot;) / last(&quot;sar.counter[q,,,plist-sz]&quot;) * {$SAR_CPU_LAT_CONST_SCHED_MIN_GRANULARITY_NS} / 1000</params>
+                    <ipmi_sensor/>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description>Approximate processes response delay caused by cpu system scheduler.</description>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>sar-cpu</name>
                         </application>
                     </applications>
                     <valuemap/>
@@ -8770,6 +8888,18 @@ Note: On SMP machines a processor that does not have any activity at all (0.00 f
                     <value>90</value>
                 </macro>
                 <macro>
+                    <macro>{$SAR_CPU_LAT_CONST_CSWCH_PROC_CYCL}</macro>
+                    <value>20000</value>
+                </macro>
+                <macro>
+                    <macro>{$SAR_CPU_LAT_CONST_SCHED_MIN_GRANULARITY_NS}</macro>
+                    <value>10000000</value>
+                </macro>
+                <macro>
+                    <macro>{$SAR_CPU_LAT_HIGH_MS}</macro>
+                    <value>100</value>
+                </macro>
+                <macro>
                     <macro>{$SAR_CPU_LOAD}</macro>
                     <value>80</value>
                 </macro>
@@ -8865,22 +8995,6 @@ CPUs count may be sufficient to cope with long-term load servicing ,which is sho
             <tags/>
         </trigger>
         <trigger>
-            <expression>{Sar Template:sar.counter[w,,,cswch/s].avg(#3)} &gt; {$SAR_CPU_CSWCH} and ( 100 - {Sar Template:sar.counter[u,ALL,,%idle].avg(#3)} ) &gt; {$SAR_CPU_LOAD}</expression>
-            <recovery_mode>0</recovery_mode>
-            <recovery_expression/>
-            <name>sar: cpu: context switch overhead</name>
-            <correlation_mode>0</correlation_mode>
-            <correlation_tag/>
-            <url/>
-            <status>0</status>
-            <priority>3</priority>
-            <description>Context switch number is very high for this server. Think about multinode configuration for high-load services.</description>
-            <type>0</type>
-            <manual_close>0</manual_close>
-            <dependencies/>
-            <tags/>
-        </trigger>
-        <trigger>
             <expression>(100 - {Sar Template:sar.counter[u,ALL,,%idle].last()} ) &gt; {$SAR_CPU_CRIT}</expression>
             <recovery_mode>0</recovery_mode>
             <recovery_expression/>
@@ -8956,6 +9070,23 @@ CPUs count may be sufficient to cope with long-term load servicing ,which is sho
             <priority>3</priority>
             <description>Your tasks spend much CPU time in uninterruptible i/o waiting state. &#13;
 It may be caused by high i/o load during applications execution or/and slow storage backend performance.</description>
+            <type>0</type>
+            <manual_close>0</manual_close>
+            <dependencies/>
+            <tags/>
+        </trigger>
+        <trigger>
+            <expression>{Sar Template:sar.cpu.lat[].avg(#3)} / 1000 &gt; {$SAR_CPU_LAT_HIGH_MS}</expression>
+            <recovery_mode>0</recovery_mode>
+            <recovery_expression/>
+            <name>sar: cpu: high scheduling latency</name>
+            <correlation_mode>0</correlation_mode>
+            <correlation_tag/>
+            <url/>
+            <status>0</status>
+            <priority>2</priority>
+            <description>The tasks possibly wait for execution significantly long time.&#13;
+Even though CFS may run heavy tasks more often, nevertheless the server's scaling sucks.</description>
             <type>0</type>
             <manual_close>0</manual_close>
             <dependencies/>
@@ -9127,7 +9258,7 @@ vm.overcommit_ratio</description>
                     <type>0</type>
                     <item>
                         <host>Sar Template</host>
-                        <key>sar.counter[w,,,cswch/s]</key>
+                        <key>sar.cpu.lat[]</key>
                     </item>
                 </graph_item>
             </graph_items>
