@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>4.0</version>
-    <date>2018-10-10T18:28:55Z</date>
+    <date>2018-10-15T13:51:03Z</date>
     <groups>
         <group>
             <name>Linux servers</name>
@@ -8986,7 +8986,7 @@ Note: On SMP machines a processor that does not have any activity at all (0.00 f
             <correlation_tag/>
             <url/>
             <status>0</status>
-            <priority>3</priority>
+            <priority>2</priority>
             <description>The big CPU scheduler queue of the tasks means, that some of them must wait when they want to run.&#13;
 CPUs count may be sufficient to cope with long-term load servicing ,which is shown by LAVG, but sometimes causes applications lags which are hard to detect, even if</description>
             <type>0</type>
@@ -9084,7 +9084,7 @@ It may be caused by high i/o load during applications execution or/and slow stor
             <correlation_tag/>
             <url/>
             <status>0</status>
-            <priority>2</priority>
+            <priority>3</priority>
             <description>The tasks possibly wait for execution significantly long time.&#13;
 Even though CFS may run heavy tasks more often, nevertheless the server's scaling sucks.</description>
             <type>0</type>
@@ -9182,7 +9182,7 @@ vm.overcommit_ratio</description>
             <tags/>
         </trigger>
         <trigger>
-            <expression>{Sar Template:sar.counter[S,,,kbswpused].last(#3)} &gt; {Sar Template:sar.counter[S,,,kbswpused].min(#3)} and {Sar Template:sar.counter[W,,,pswpin/s].sum(#3)} &gt; {Sar Template:sar.counter[W,,,pswpout/s].sum(#3)}</expression>
+            <expression>{Sar Template:sar.counter[S,,,kbswpused].last(#3)} &gt; {Sar Template:sar.counter[S,,,kbswpused].min(#3)} and {Sar Template:sar.counter[W,,,pswpout/s].sum(#3)} &gt; {Sar Template:sar.counter[W,,,pswpin/s].sum(#3)}</expression>
             <recovery_mode>0</recovery_mode>
             <recovery_expression/>
             <name>sar: swp: memory swapping</name>
