@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>4.0</version>
-    <date>2018-10-30T14:57:57Z</date>
+    <date>2018-10-30T15:49:44Z</date>
     <groups>
         <group>
             <name>Linux servers</name>
@@ -6117,6 +6117,68 @@ last(&quot;sar.counter[q,,,runq-sz]&quot;) / last(&quot;sar.counter[q,,,plist-sz
                             <master_item/>
                         </item_prototype>
                         <item_prototype>
+                            <name>sar: io: blkdev: read KB ({#COUNTER})</name>
+                            <type>0</type>
+                            <snmp_community/>
+                            <snmp_oid/>
+                            <key>sar.counter[dp,,{#COUNTER},rkB/s]</key>
+                            <delay>10m</delay>
+                            <history>90d</history>
+                            <trends>365d</trends>
+                            <status>1</status>
+                            <value_type>0</value_type>
+                            <allowed_hosts/>
+                            <units>KB</units>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port/>
+                            <description>Number of kilobytes read from the device per second.&#13;
+&#13;
+Sysstat 11 item</description>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>sar-io</name>
+                                </application>
+                            </applications>
+                            <valuemap/>
+                            <logtimefmt/>
+                            <preprocessing/>
+                            <jmx_endpoint/>
+                            <timeout>3s</timeout>
+                            <url/>
+                            <query_fields/>
+                            <posts/>
+                            <status_codes>200</status_codes>
+                            <follow_redirects>1</follow_redirects>
+                            <post_type>0</post_type>
+                            <http_proxy/>
+                            <headers/>
+                            <retrieve_mode>0</retrieve_mode>
+                            <request_method>0</request_method>
+                            <output_format>0</output_format>
+                            <allow_traps>0</allow_traps>
+                            <ssl_cert_file/>
+                            <ssl_key_file/>
+                            <ssl_key_password/>
+                            <verify_peer>0</verify_peer>
+                            <verify_host>0</verify_host>
+                            <application_prototypes/>
+                            <master_item/>
+                        </item_prototype>
+                        <item_prototype>
                             <name>sar: io: blkdev: tps ({#COUNTER})</name>
                             <type>0</type>
                             <snmp_community/>
@@ -6166,6 +6228,68 @@ last(&quot;sar.counter[q,,,runq-sz]&quot;) / last(&quot;sar.counter[q,,,plist-sz
                             <headers/>
                             <retrieve_mode>0</retrieve_mode>
                             <request_method>1</request_method>
+                            <output_format>0</output_format>
+                            <allow_traps>0</allow_traps>
+                            <ssl_cert_file/>
+                            <ssl_key_file/>
+                            <ssl_key_password/>
+                            <verify_peer>0</verify_peer>
+                            <verify_host>0</verify_host>
+                            <application_prototypes/>
+                            <master_item/>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>sar: io: blkdev: write KB ({#COUNTER})</name>
+                            <type>0</type>
+                            <snmp_community/>
+                            <snmp_oid/>
+                            <key>sar.counter[dp,,{#COUNTER},wkB/s]</key>
+                            <delay>10m</delay>
+                            <history>90d</history>
+                            <trends>365d</trends>
+                            <status>1</status>
+                            <value_type>0</value_type>
+                            <allowed_hosts/>
+                            <units>KB</units>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port/>
+                            <description>Number of kilobytes written to the device per second.&#13;
+&#13;
+Sysstat 11 item</description>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>sar-io</name>
+                                </application>
+                            </applications>
+                            <valuemap/>
+                            <logtimefmt/>
+                            <preprocessing/>
+                            <jmx_endpoint/>
+                            <timeout>3s</timeout>
+                            <url/>
+                            <query_fields/>
+                            <posts/>
+                            <status_codes>200</status_codes>
+                            <follow_redirects>1</follow_redirects>
+                            <post_type>0</post_type>
+                            <http_proxy/>
+                            <headers/>
+                            <retrieve_mode>0</retrieve_mode>
+                            <request_method>0</request_method>
                             <output_format>0</output_format>
                             <allow_traps>0</allow_traps>
                             <ssl_cert_file/>
@@ -6287,14 +6411,30 @@ last(&quot;sar.counter[q,,,runq-sz]&quot;) / last(&quot;sar.counter[q,,,plist-sz
                             <tags/>
                         </trigger_prototype>
                         <trigger_prototype>
-                            <expression>{Sar Template:sar.counter[dp,,{#COUNTER},wr_sec/s].avg(#3)}*2&gt;{$SAR_IO_WRITE_THRESHOLD}</expression>
+                            <expression>{Sar Template:sar.counter[dp,,{#COUNTER},rkB/s].avg(#3)}&gt;{$SAR_IO_READ_THRESHOLD}</expression>
+                            <recovery_mode>0</recovery_mode>
+                            <recovery_expression/>
+                            <name>sar: io: blkdev: intensive read ({#COUNTER})</name>
+                            <correlation_mode>0</correlation_mode>
+                            <correlation_tag/>
+                            <url/>
+                            <status>1</status>
+                            <priority>1</priority>
+                            <description>Read rate on ({#COUNTER}) is more than {$SAR_IO_READ_THRESHOLD} KB.</description>
+                            <type>0</type>
+                            <manual_close>0</manual_close>
+                            <dependencies/>
+                            <tags/>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{Sar Template:sar.counter[dp,,{#COUNTER},wkB/s].avg(#3)}&gt;{$SAR_IO_WRITE_THRESHOLD}</expression>
                             <recovery_mode>0</recovery_mode>
                             <recovery_expression/>
                             <name>sar: io: blkdev: intensive write ({#COUNTER})</name>
                             <correlation_mode>0</correlation_mode>
                             <correlation_tag/>
                             <url/>
-                            <status>0</status>
+                            <status>1</status>
                             <priority>1</priority>
                             <description>Write rate on ({#COUNTER}) is more than {$SAR_IO_WRITE_THRESHOLD} KB.</description>
                             <type>0</type>
@@ -6425,6 +6565,50 @@ last(&quot;sar.counter[q,,,runq-sz]&quot;) / last(&quot;sar.counter[q,,,plist-sz
                                     <item>
                                         <host>Sar Template</host>
                                         <key>sar.counter[dp,,{#COUNTER},wr_sec/s]</key>
+                                    </item>
+                                </graph_item>
+                            </graph_items>
+                        </graph_prototype>
+                        <graph_prototype>
+                            <name>sar: io: blkdev: read/write rate KB ({#COUNTER})</name>
+                            <width>900</width>
+                            <height>200</height>
+                            <yaxismin>0.0000</yaxismin>
+                            <yaxismax>100.0000</yaxismax>
+                            <show_work_period>1</show_work_period>
+                            <show_triggers>1</show_triggers>
+                            <type>0</type>
+                            <show_legend>1</show_legend>
+                            <show_3d>0</show_3d>
+                            <percent_left>0.0000</percent_left>
+                            <percent_right>0.0000</percent_right>
+                            <ymin_type_1>0</ymin_type_1>
+                            <ymax_type_1>0</ymax_type_1>
+                            <ymin_item_1>0</ymin_item_1>
+                            <ymax_item_1>0</ymax_item_1>
+                            <graph_items>
+                                <graph_item>
+                                    <sortorder>0</sortorder>
+                                    <drawtype>0</drawtype>
+                                    <color>008800</color>
+                                    <yaxisside>0</yaxisside>
+                                    <calc_fnc>2</calc_fnc>
+                                    <type>0</type>
+                                    <item>
+                                        <host>Sar Template</host>
+                                        <key>sar.counter[dp,,{#COUNTER},rkB/s]</key>
+                                    </item>
+                                </graph_item>
+                                <graph_item>
+                                    <sortorder>1</sortorder>
+                                    <drawtype>0</drawtype>
+                                    <color>0000DD</color>
+                                    <yaxisside>0</yaxisside>
+                                    <calc_fnc>2</calc_fnc>
+                                    <type>0</type>
+                                    <item>
+                                        <host>Sar Template</host>
+                                        <key>sar.counter[dp,,{#COUNTER},wkB/s]</key>
                                     </item>
                                 </graph_item>
                             </graph_items>
