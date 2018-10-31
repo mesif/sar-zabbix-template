@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>4.0</version>
-    <date>2018-10-30T16:08:29Z</date>
+    <date>2018-10-31T19:32:25Z</date>
     <groups>
         <group>
             <name>Linux servers</name>
@@ -9531,11 +9531,11 @@ Note: On SMP machines a processor that does not have any activity at all (0.00 f
                 </macro>
                 <macro>
                     <macro>{$SAR_MEM_CRIT}</macro>
-                    <value>99</value>
+                    <value>95</value>
                 </macro>
                 <macro>
                     <macro>{$SAR_MEM_HIGH}</macro>
-                    <value>95</value>
+                    <value>90</value>
                 </macro>
                 <macro>
                     <macro>{$SAR_MEM_OVERCOMMIT}</macro>
@@ -9709,7 +9709,7 @@ Learn more reading docs.oracle.com about sar -q.</description>
             <correlation_mode>0</correlation_mode>
             <correlation_tag/>
             <url/>
-            <status>1</status>
+            <status>0</status>
             <priority>3</priority>
             <description>Disabled.&#13;
 Works only with fresh versions of sar, where memused calculated as &quot;total installed memory - kbmemfree - kbbuffers - kbcached -  kbslab&quot;.</description>
@@ -9726,7 +9726,7 @@ Works only with fresh versions of sar, where memused calculated as &quot;total i
             <correlation_mode>0</correlation_mode>
             <correlation_tag/>
             <url/>
-            <status>1</status>
+            <status>0</status>
             <priority>4</priority>
             <description>Disabled.&#13;
 Works only with fresh versions of sar, where memused calculated as &quot;total installed memory - kbmemfree - kbbuffers - kbcached -  kbslab&quot;.</description>
