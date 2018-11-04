@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>4.0</version>
-    <date>2018-10-31T19:32:25Z</date>
+    <date>2018-11-04T19:30:08Z</date>
     <groups>
         <group>
             <name>Linux servers</name>
@@ -6304,7 +6304,7 @@ last(&quot;sar.counter[q,,,runq-sz]&quot;) / last(&quot;sar.counter[q,,,plist-sz
                         </trigger_prototype>
                         <trigger_prototype>
                             <expression>{Sar Template 11:sar.counter[dp,,{#COUNTER},aqu-sz].avg(#3)}&gt;1 and&#13;
-{Sar Template 11:sar.counter[dp,,{#COUNTER},aqu-sz].last()}&gt;{Sar Template 11:sar.counter[dp,,{#COUNTER},aqu-sz].min(#3)}</expression>
+{Sar Template 11:sar.counter[dp,,{#COUNTER},aqu-sz].last()} = {Sar Template 11:sar.counter[dp,,{#COUNTER},aqu-sz].max(#3)}</expression>
                             <recovery_mode>0</recovery_mode>
                             <recovery_expression/>
                             <name>sar: io: blkdev: queue growup ({#COUNTER})</name>
