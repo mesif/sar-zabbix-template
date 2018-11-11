@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>4.0</version>
-    <date>2018-11-04T19:29:31Z</date>
+    <date>2018-11-11T03:18:31Z</date>
     <groups>
         <group>
             <name>Linux servers</name>
@@ -5322,7 +5322,7 @@ Note: On SMP machines a processor that does not have any activity at all (0.00 f
                     <snmpv3_authpassphrase/>
                     <snmpv3_privprotocol>0</snmpv3_privprotocol>
                     <snmpv3_privpassphrase/>
-                    <params>last(&quot;sar.counter[w,,,cswch/s]&quot;) * {$SAR_CPU_LAT_CONST_CSWCH_PROC_CYCL} / last(&quot;sar.counter[m,CPU,,MHz]&quot;) / last(&quot;system.cpu.num[]&quot;) + &#13;
+                    <params>last(&quot;sar.counter[w,,,cswch/s]&quot;) * {$SAR_CPU_LAT_CONST_CSWCH_TSS_SIZE} * {$SAR_CPU_LAT_CONST_CSWCH_MEM_LAT_NS} * 2 / last(&quot;sar.counter[m,CPU,,MHz]&quot;) / last(&quot;system.cpu.num[]&quot;) + &#13;
 last(&quot;sar.counter[q,,,runq-sz]&quot;) / last(&quot;sar.counter[q,,,plist-sz]&quot;) * {$SAR_CPU_LAT_CONST_SCHED_MIN_GRANULARITY_NS} / 1000</params>
                     <ipmi_sensor/>
                     <authtype>0</authtype>
@@ -5949,7 +5949,7 @@ last(&quot;sar.counter[q,,,runq-sz]&quot;) / last(&quot;sar.counter[q,,,plist-sz
                             <tags/>
                         </trigger_prototype>
                         <trigger_prototype>
-                            <expression>{Sar Template 10:sar.counter[dp,,{#COUNTER},avgqu-sz].avg(#3)}&gt;1 and&#13;
+                            <expression>{Sar Template 10:sar.counter[dp,,{#COUNTER},avgqu-sz].avg(#3)}&gt;{$SAR_IO_QUEUE_HIGH} and&#13;
 {Sar Template 10:sar.counter[dp,,{#COUNTER},avgqu-sz].last()} = {Sar Template 10:sar.counter[dp,,{#COUNTER},avgqu-sz].max(#3)}</expression>
                             <recovery_mode>0</recovery_mode>
                             <recovery_expression/>
@@ -8537,8 +8537,12 @@ Note: On SMP machines a processor that does not have any activity at all (0.00 f
                     <value>90</value>
                 </macro>
                 <macro>
-                    <macro>{$SAR_CPU_LAT_CONST_CSWCH_PROC_CYCL}</macro>
-                    <value>20000</value>
+                    <macro>{$SAR_CPU_LAT_CONST_CSWCH_MEM_LAT_NS}</macro>
+                    <value>120</value>
+                </macro>
+                <macro>
+                    <macro>{$SAR_CPU_LAT_CONST_CSWCH_TSS_SIZE}</macro>
+                    <value>100</value>
                 </macro>
                 <macro>
                     <macro>{$SAR_CPU_LAT_CONST_SCHED_MIN_GRANULARITY_NS}</macro>
@@ -8546,7 +8550,7 @@ Note: On SMP machines a processor that does not have any activity at all (0.00 f
                 </macro>
                 <macro>
                     <macro>{$SAR_CPU_LAT_HIGH_MS}</macro>
-                    <value>100</value>
+                    <value>50</value>
                 </macro>
                 <macro>
                     <macro>{$SAR_CPU_LOAD}</macro>
@@ -8567,6 +8571,10 @@ Note: On SMP machines a processor that does not have any activity at all (0.00 f
                 <macro>
                     <macro>{$SAR_IO_HIGH_LAT}</macro>
                     <value>50</value>
+                </macro>
+                <macro>
+                    <macro>{$SAR_IO_QUEUE_HIGH}</macro>
+                    <value>1</value>
                 </macro>
                 <macro>
                     <macro>{$SAR_IO_READ_THRESHOLD}</macro>
