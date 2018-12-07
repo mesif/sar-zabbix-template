@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>4.0</version>
-    <date>2018-12-06T12:34:21Z</date>
+    <date>2018-12-07T17:54:52Z</date>
     <groups>
         <group>
             <name>Templates</name>
@@ -2218,24 +2218,7 @@
                             <master_item/>
                         </item_prototype>
                     </item_prototypes>
-                    <trigger_prototypes>
-                        <trigger_prototype>
-                            <expression>{SS Template:ss.stats.any[tcp,all,{#IP},any,,].last()} &gt; {$SS_CONN_IP_HIGH}</expression>
-                            <recovery_mode>0</recovery_mode>
-                            <recovery_expression/>
-                            <name>ss: ip: tcp: outbound sockets running out ({#IP})</name>
-                            <correlation_mode>0</correlation_mode>
-                            <correlation_tag/>
-                            <url/>
-                            <status>0</status>
-                            <priority>4</priority>
-                            <description/>
-                            <type>0</type>
-                            <manual_close>0</manual_close>
-                            <dependencies/>
-                            <tags/>
-                        </trigger_prototype>
-                    </trigger_prototypes>
+                    <trigger_prototypes/>
                     <graph_prototypes>
                         <graph_prototype>
                             <name>ss: ip: tcp: all (src: {#IP})</name>
