@@ -5518,7 +5518,7 @@ last(&quot;sar.counter[q,,,runq-sz]&quot;) / last(&quot;sar.counter[q,,,plist-sz
                             </condition>
                         </conditions>
                     </filter>
-                    <lifetime>1d</lifetime>
+                    <lifetime>4h</lifetime>
                     <description/>
                     <item_prototypes>
                         <item_prototype>
