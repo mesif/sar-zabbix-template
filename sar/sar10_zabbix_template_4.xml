@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>4.0</version>
-    <date>2018-12-19T19:40:00Z</date>
+    <date>2019-01-31T13:20:10Z</date>
     <groups>
         <group>
             <name>Linux servers</name>
@@ -6737,7 +6737,7 @@ last(&quot;sar.counter[q,,,runq-sz]&quot;) / last(&quot;sar.counter[q,,,plist-sz
                             </condition>
                         </conditions>
                     </filter>
-                    <lifetime>1d</lifetime>
+                    <lifetime>4h</lifetime>
                     <description/>
                     <item_prototypes>
                         <item_prototype>
@@ -8517,7 +8517,7 @@ Note: On SMP machines a processor that does not have any activity at all (0.00 f
                 </macro>
                 <macro>
                     <macro>{$SAR_CPU_LAT_HIGH_MS}</macro>
-                    <value>50</value>
+                    <value>100</value>
                 </macro>
                 <macro>
                     <macro>{$SAR_CPU_LOAD}</macro>
