@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>4.0</version>
-    <date>2019-01-31T13:20:10Z</date>
+    <date>2019-04-10T20:46:37Z</date>
     <groups>
         <group>
             <name>Linux servers</name>
@@ -5507,13 +5507,19 @@ last(&quot;sar.counter[q,,,runq-sz]&quot;) / last(&quot;sar.counter[q,,,plist-sz
                     <privatekey/>
                     <port/>
                     <filter>
-                        <evaltype>0</evaltype>
+                        <evaltype>1</evaltype>
                         <formula/>
                         <conditions>
                             <condition>
                                 <macro>{#COUNTER}</macro>
-                                <value>.*</value>
-                                <operator>8</operator>
+                                <value>^sr[0-9]$</value>
+                                <operator>9</operator>
+                                <formulaid>B</formulaid>
+                            </condition>
+                            <condition>
+                                <macro>{#COUNTER}</macro>
+                                <value>^fd[0-9]$</value>
+                                <operator>9</operator>
                                 <formulaid>A</formulaid>
                             </condition>
                         </conditions>
@@ -6018,7 +6024,8 @@ last(&quot;sar.counter[q,,,runq-sz]&quot;) / last(&quot;sar.counter[q,,,plist-sz
                             <url/>
                             <status>0</status>
                             <priority>3</priority>
-                            <description/>
+                            <description>The block device's queue became greater than {$SAR_IO_QUEUE_HIGH} and increases itself.&#13;
+If you intentionally tuned (or even not) disk's scheduler, ignore this or correct the macro. Else backing storage performance should be investigated.</description>
                             <type>0</type>
                             <manual_close>0</manual_close>
                             <dependencies/>
@@ -8565,7 +8572,7 @@ Note: On SMP machines a processor that does not have any activity at all (0.00 f
                 </macro>
                 <macro>
                     <macro>{$SAR_MEM_HIGH}</macro>
-                    <value>100</value>
+                    <value>99</value>
                 </macro>
                 <macro>
                     <macro>{$SAR_MEM_OVERCOMMIT}</macro>
@@ -8749,6 +8756,23 @@ Works only with fresh versions of sar, where memused calculated as &quot;total i
             <tags/>
         </trigger>
         <trigger>
+            <expression>{Sar Template 10:sar.counter[r,,,%memused].avg(#3)}&gt;{$SAR_MEM_UTIL}</expression>
+            <recovery_mode>0</recovery_mode>
+            <recovery_expression/>
+            <name>sar: mem: high memory utilization</name>
+            <correlation_mode>0</correlation_mode>
+            <correlation_tag/>
+            <url/>
+            <status>0</status>
+            <priority>2</priority>
+            <description>Basically disabled, but sometimes indicates full usage of system memory, that may lead to unavailability when huge allocation is needed instantly but fails.&#13;
+See vm.min_free_kbytes in kernel docs.</description>
+            <type>0</type>
+            <manual_close>0</manual_close>
+            <dependencies/>
+            <tags/>
+        </trigger>
+        <trigger>
             <expression>{Sar Template 10:sar.counter[r,,,%commit].avg(#3)}&gt;{$SAR_MEM_OVERCOMMIT}</expression>
             <recovery_mode>0</recovery_mode>
             <recovery_expression/>
@@ -8785,7 +8809,7 @@ vm.overcommit_ratio</description>
             <tags/>
         </trigger>
         <trigger>
-            <expression>{Sar Template 10:sar.counter[S,,,kbswpused].last(#3)} &gt; {Sar Template 10:sar.counter[S,,,kbswpused].min(#3)} and {Sar Template 10:sar.counter[W,,,pswpout/s].sum(#3)} &gt; {Sar Template 10:sar.counter[W,,,pswpin/s].sum(#3)}</expression>
+            <expression>{Sar Template 10:sar.counter[S,,,kbswpused].last()} &gt; 2 * {Sar Template 10:sar.counter[S,,,kbswpused].avg(#3)} and {Sar Template 10:sar.counter[W,,,pswpout/s].sum(#3)} &gt; {Sar Template 10:sar.counter[W,,,pswpin/s].sum(#3)}</expression>
             <recovery_mode>0</recovery_mode>
             <recovery_expression/>
             <name>sar: swp: memory swapping</name>
