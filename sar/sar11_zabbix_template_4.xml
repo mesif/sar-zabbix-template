@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>4.0</version>
-    <date>2019-04-10T20:47:39Z</date>
+    <date>2019-04-12T16:15:23Z</date>
     <groups>
         <group>
             <name>Linux servers</name>
@@ -6363,7 +6363,7 @@ last(&quot;sar.counter[q,,,runq-sz]&quot;) / last(&quot;sar.counter[q,,,plist-sz
                     </item_prototypes>
                     <trigger_prototypes>
                         <trigger_prototype>
-                            <expression>{Sar Template 11:sar.counter[dp,,{#COUNTER},await].avg(#3)}&gt;{$SAR_IO_CRIT_LAT}</expression>
+                            <expression>{Sar Template 11:sar.counter[dp,,{#COUNTER},await].min(#3)}&gt;{$SAR_IO_CRIT_LAT}</expression>
                             <recovery_mode>0</recovery_mode>
                             <recovery_expression/>
                             <name>sar: io: blkdev: critical latency ({#COUNTER})</name>
@@ -6379,7 +6379,7 @@ last(&quot;sar.counter[q,,,runq-sz]&quot;) / last(&quot;sar.counter[q,,,plist-sz
                             <tags/>
                         </trigger_prototype>
                         <trigger_prototype>
-                            <expression>{Sar Template 11:sar.counter[dp,,{#COUNTER},await].avg(#3)}&gt;{$SAR_IO_HIGH_LAT}</expression>
+                            <expression>{Sar Template 11:sar.counter[dp,,{#COUNTER},await].min(#3)}&gt;{$SAR_IO_HIGH_LAT}</expression>
                             <recovery_mode>0</recovery_mode>
                             <recovery_expression/>
                             <name>sar: io: blkdev: high latency ({#COUNTER})</name>
@@ -6427,8 +6427,8 @@ last(&quot;sar.counter[q,,,runq-sz]&quot;) / last(&quot;sar.counter[q,,,plist-sz
                             <tags/>
                         </trigger_prototype>
                         <trigger_prototype>
-                            <expression>{Sar Template 11:sar.counter[dp,,{#COUNTER},aqu-sz].avg(#3)}&gt;{$SAR_IO_QUEUE_HIGH} and&#13;
-{Sar Template 11:sar.counter[dp,,{#COUNTER},aqu-sz].last()} = {Sar Template 11:sar.counter[dp,,{#COUNTER},aqu-sz].max(#3)}</expression>
+                            <expression>{Sar Template 11:sar.counter[dp,,{#COUNTER},aqu-sz].min(#3)}&gt;{$SAR_IO_QUEUE_HIGH} and&#13;
+{Sar Template 11:sar.counter[dp,,{#COUNTER},aqu-sz].delta(#3)} &gt; 0</expression>
                             <recovery_mode>0</recovery_mode>
                             <recovery_expression/>
                             <name>sar: io: blkdev: queue growup ({#COUNTER})</name>
@@ -6437,7 +6437,7 @@ last(&quot;sar.counter[q,,,runq-sz]&quot;) / last(&quot;sar.counter[q,,,plist-sz
                             <url/>
                             <status>0</status>
                             <priority>3</priority>
-                            <description>The block device's queue became greater than {$SAR_IO_QUEUE_HIGH} and increases itself.&#13;
+                            <description>The block device's queue grew up higher than {$SAR_IO_QUEUE_HIGH} and increases.&#13;
 If you intentionally tuned (or even not) disk's scheduler, ignore this or correct the macro. Else backing storage performance should be investigated.</description>
                             <type>0</type>
                             <manual_close>0</manual_close>
@@ -9632,7 +9632,7 @@ Note: On SMP machines a processor that does not have any activity at all (0.00 f
                 </macro>
                 <macro>
                     <macro>{$SAR_IO_CRIT_LAT}</macro>
-                    <value>100</value>
+                    <value>75</value>
                 </macro>
                 <macro>
                     <macro>{$SAR_IO_HIGH_LAT}</macro>
