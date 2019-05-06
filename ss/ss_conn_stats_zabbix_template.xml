@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
-    <version>4.0</version>
-    <date>2018-12-07T17:54:52Z</date>
+    <version>4.2</version>
+    <date>2019-05-06T11:29:43Z</date>
     <groups>
         <group>
             <name>Templates</name>
@@ -2273,43 +2273,31 @@
                                 <graph_item>
                                     <sortorder>0</sortorder>
                                     <drawtype>0</drawtype>
-                                    <color>199C0D</color>
+                                    <color>7CB342</color>
                                     <yaxisside>0</yaxisside>
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
                                         <host>SS Template</host>
-                                        <key>ss.stats.any[tcp,close-wait,any,{#IP},,]</key>
+                                        <key>ss.stats.any[tcp,syn-sent,any,{#IP},,]</key>
                                     </item>
                                 </graph_item>
                                 <graph_item>
                                     <sortorder>1</sortorder>
                                     <drawtype>0</drawtype>
-                                    <color>B71C1C</color>
+                                    <color>FFFF00</color>
                                     <yaxisside>0</yaxisside>
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
                                         <host>SS Template</host>
-                                        <key>ss.stats.any[tcp,closed,any,{#IP},,]</key>
+                                        <key>ss.stats.any[tcp,syn-recv,any,{#IP},,]</key>
                                     </item>
                                 </graph_item>
                                 <graph_item>
                                     <sortorder>2</sortorder>
                                     <drawtype>0</drawtype>
-                                    <color>2774A4</color>
-                                    <yaxisside>0</yaxisside>
-                                    <calc_fnc>2</calc_fnc>
-                                    <type>0</type>
-                                    <item>
-                                        <host>SS Template</host>
-                                        <key>ss.stats.any[tcp,closing,any,{#IP},,]</key>
-                                    </item>
-                                </graph_item>
-                                <graph_item>
-                                    <sortorder>3</sortorder>
-                                    <drawtype>0</drawtype>
-                                    <color>F7941D</color>
+                                    <color>40DF20</color>
                                     <yaxisside>0</yaxisside>
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
@@ -2319,9 +2307,9 @@
                                     </item>
                                 </graph_item>
                                 <graph_item>
-                                    <sortorder>4</sortorder>
+                                    <sortorder>3</sortorder>
                                     <drawtype>0</drawtype>
-                                    <color>FC6EA3</color>
+                                    <color>039BE5</color>
                                     <yaxisside>0</yaxisside>
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
@@ -2331,9 +2319,21 @@
                                     </item>
                                 </graph_item>
                                 <graph_item>
+                                    <sortorder>4</sortorder>
+                                    <drawtype>0</drawtype>
+                                    <color>283593</color>
+                                    <yaxisside>0</yaxisside>
+                                    <calc_fnc>2</calc_fnc>
+                                    <type>0</type>
+                                    <item>
+                                        <host>SS Template</host>
+                                        <key>ss.stats.any[tcp,close-wait,any,{#IP},,]</key>
+                                    </item>
+                                </graph_item>
+                                <graph_item>
                                     <sortorder>5</sortorder>
                                     <drawtype>0</drawtype>
-                                    <color>6C59DC</color>
+                                    <color>9C27B0</color>
                                     <yaxisside>0</yaxisside>
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
@@ -2345,7 +2345,7 @@
                                 <graph_item>
                                     <sortorder>6</sortorder>
                                     <drawtype>0</drawtype>
-                                    <color>C7A72D</color>
+                                    <color>AB47BC</color>
                                     <yaxisside>0</yaxisside>
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
@@ -2357,37 +2357,37 @@
                                 <graph_item>
                                     <sortorder>7</sortorder>
                                     <drawtype>0</drawtype>
-                                    <color>BA2A5D</color>
-                                    <yaxisside>0</yaxisside>
-                                    <calc_fnc>2</calc_fnc>
-                                    <type>0</type>
-                                    <item>
-                                        <host>SS Template</host>
-                                        <key>ss.stats.any[tcp,syn-recv,any,{#IP},,]</key>
-                                    </item>
-                                </graph_item>
-                                <graph_item>
-                                    <sortorder>8</sortorder>
-                                    <drawtype>0</drawtype>
-                                    <color>F230E0</color>
-                                    <yaxisside>0</yaxisside>
-                                    <calc_fnc>2</calc_fnc>
-                                    <type>0</type>
-                                    <item>
-                                        <host>SS Template</host>
-                                        <key>ss.stats.any[tcp,syn-sent,any,{#IP},,]</key>
-                                    </item>
-                                </graph_item>
-                                <graph_item>
-                                    <sortorder>9</sortorder>
-                                    <drawtype>0</drawtype>
-                                    <color>283593</color>
+                                    <color>D81B60</color>
                                     <yaxisside>0</yaxisside>
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
                                         <host>SS Template</host>
                                         <key>ss.stats.any[tcp,time-wait,any,{#IP},,]</key>
+                                    </item>
+                                </graph_item>
+                                <graph_item>
+                                    <sortorder>8</sortorder>
+                                    <drawtype>0</drawtype>
+                                    <color>FF4336</color>
+                                    <yaxisside>0</yaxisside>
+                                    <calc_fnc>2</calc_fnc>
+                                    <type>0</type>
+                                    <item>
+                                        <host>SS Template</host>
+                                        <key>ss.stats.any[tcp,closing,any,{#IP},,]</key>
+                                    </item>
+                                </graph_item>
+                                <graph_item>
+                                    <sortorder>9</sortorder>
+                                    <drawtype>0</drawtype>
+                                    <color>E62828</color>
+                                    <yaxisside>0</yaxisside>
+                                    <calc_fnc>2</calc_fnc>
+                                    <type>0</type>
+                                    <item>
+                                        <host>SS Template</host>
+                                        <key>ss.stats.any[tcp,closed,any,{#IP},,]</key>
                                     </item>
                                 </graph_item>
                             </graph_items>
@@ -2413,7 +2413,7 @@
                                 <graph_item>
                                     <sortorder>0</sortorder>
                                     <drawtype>0</drawtype>
-                                    <color>199C0D</color>
+                                    <color>7CB342</color>
                                     <yaxisside>0</yaxisside>
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
@@ -2425,7 +2425,7 @@
                                 <graph_item>
                                     <sortorder>1</sortorder>
                                     <drawtype>0</drawtype>
-                                    <color>F63100</color>
+                                    <color>FFFF00</color>
                                     <yaxisside>0</yaxisside>
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
@@ -2437,7 +2437,7 @@
                                 <graph_item>
                                     <sortorder>2</sortorder>
                                     <drawtype>0</drawtype>
-                                    <color>2774A4</color>
+                                    <color>40DF20</color>
                                     <yaxisside>0</yaxisside>
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
@@ -2449,7 +2449,7 @@
                                 <graph_item>
                                     <sortorder>3</sortorder>
                                     <drawtype>0</drawtype>
-                                    <color>F7941D</color>
+                                    <color>039BE5</color>
                                     <yaxisside>0</yaxisside>
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
@@ -2461,7 +2461,7 @@
                                 <graph_item>
                                     <sortorder>4</sortorder>
                                     <drawtype>0</drawtype>
-                                    <color>FC6EA3</color>
+                                    <color>283593</color>
                                     <yaxisside>0</yaxisside>
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
@@ -2473,7 +2473,7 @@
                                 <graph_item>
                                     <sortorder>5</sortorder>
                                     <drawtype>0</drawtype>
-                                    <color>6C59DC</color>
+                                    <color>9C27B0</color>
                                     <yaxisside>0</yaxisside>
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
@@ -2485,7 +2485,7 @@
                                 <graph_item>
                                     <sortorder>6</sortorder>
                                     <drawtype>0</drawtype>
-                                    <color>C7A72D</color>
+                                    <color>AB47BC</color>
                                     <yaxisside>0</yaxisside>
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
@@ -2497,7 +2497,7 @@
                                 <graph_item>
                                     <sortorder>7</sortorder>
                                     <drawtype>0</drawtype>
-                                    <color>BA2A5D</color>
+                                    <color>D81B60</color>
                                     <yaxisside>0</yaxisside>
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
@@ -2509,7 +2509,7 @@
                                 <graph_item>
                                     <sortorder>8</sortorder>
                                     <drawtype>0</drawtype>
-                                    <color>F230E0</color>
+                                    <color>FF4336</color>
                                     <yaxisside>0</yaxisside>
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
@@ -2521,7 +2521,7 @@
                                 <graph_item>
                                     <sortorder>9</sortorder>
                                     <drawtype>0</drawtype>
-                                    <color>5CCD18</color>
+                                    <color>E62828</color>
                                     <yaxisside>0</yaxisside>
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
@@ -2552,6 +2552,9 @@
                     <ssl_key_password/>
                     <verify_peer>0</verify_peer>
                     <verify_host>0</verify_host>
+                    <lld_macro_paths/>
+                    <preprocessing/>
+                    <master_item/>
                 </discovery_rule>
             </discovery_rules>
             <httptests/>
@@ -2571,6 +2574,7 @@
             </macros>
             <templates/>
             <screens/>
+            <tags/>
         </template>
     </templates>
     <triggers>
@@ -2701,18 +2705,6 @@
                 <graph_item>
                     <sortorder>0</sortorder>
                     <drawtype>0</drawtype>
-                    <color>40DF20</color>
-                    <yaxisside>0</yaxisside>
-                    <calc_fnc>2</calc_fnc>
-                    <type>0</type>
-                    <item>
-                        <host>SS Template</host>
-                        <key>ss.stats.tcp.fast[estab]</key>
-                    </item>
-                </graph_item>
-                <graph_item>
-                    <sortorder>1</sortorder>
-                    <drawtype>0</drawtype>
                     <color>7CB342</color>
                     <yaxisside>0</yaxisside>
                     <calc_fnc>2</calc_fnc>
@@ -2723,7 +2715,7 @@
                     </item>
                 </graph_item>
                 <graph_item>
-                    <sortorder>2</sortorder>
+                    <sortorder>1</sortorder>
                     <drawtype>0</drawtype>
                     <color>FFFF00</color>
                     <yaxisside>0</yaxisside>
@@ -2732,6 +2724,18 @@
                     <item>
                         <host>SS Template</host>
                         <key>ss.stats.any[tcp,syn-recv,any,any,,]</key>
+                    </item>
+                </graph_item>
+                <graph_item>
+                    <sortorder>2</sortorder>
+                    <drawtype>0</drawtype>
+                    <color>40DF20</color>
+                    <yaxisside>0</yaxisside>
+                    <calc_fnc>2</calc_fnc>
+                    <type>0</type>
+                    <item>
+                        <host>SS Template</host>
+                        <key>ss.stats.tcp.fast[estab]</key>
                     </item>
                 </graph_item>
                 <graph_item>
@@ -2809,7 +2813,7 @@
                 <graph_item>
                     <sortorder>9</sortorder>
                     <drawtype>0</drawtype>
-                    <color>D62828</color>
+                    <color>E62828</color>
                     <yaxisside>0</yaxisside>
                     <calc_fnc>2</calc_fnc>
                     <type>0</type>
