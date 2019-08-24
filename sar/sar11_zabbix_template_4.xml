@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>4.2</version>
-    <date>2019-08-24T12:20:10Z</date>
+    <date>2019-08-24T12:42:10Z</date>
     <groups>
         <group>
             <name>Linux servers</name>
@@ -51,7 +51,7 @@
                     <snmp_oid/>
                     <key>sar.counter[%memavail]</key>
                     <delay>{$SAR_ZBX_POLL}</delay>
-                    {$SAR_ZBX_HISTORY}</history>
+                    <history>{$SAR_ZBX_HISTORY}</history>
                     <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
@@ -110,7 +110,7 @@
                     <snmp_oid/>
                     <key>sar.counter[b,,,bread/s]</key>
                     <delay>{$SAR_ZBX_POLL}</delay>
-                    {$SAR_ZBX_HISTORY}</history>
+                    <history>{$SAR_ZBX_HISTORY}</history>
                     <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
@@ -5948,7 +5948,7 @@ last(&quot;sar.counter[q,,,runq-sz]&quot;) / last(&quot;sar.counter[q,,,plist-sz
                             <key>sar.counter[dp,,{#COUNTER},%util]</key>
                             <delay>{$SAR_ZBX_POLL}</delay>
                             <history>{$SAR_ZBX_HISTORY}</history>
-                            <history>{$SAR_ZBX_TREND}</history>
+                            <trends>{$SAR_ZBX_TREND}</trends>
                             <status>0</status>
                             <value_type>0</value_type>
                             <allowed_hosts/>
@@ -6008,7 +6008,7 @@ last(&quot;sar.counter[q,,,runq-sz]&quot;) / last(&quot;sar.counter[q,,,plist-sz
                             <key>sar.counter[dp,,{#COUNTER},aqu-sz]</key>
                             <delay>{$SAR_ZBX_POLL}</delay>
                             <history>{$SAR_ZBX_HISTORY}</history>
-                            <history>{$SAR_ZBX_TREND}</history>
+                            <trends>{$SAR_ZBX_TREND}</trends>
                             <status>0</status>
                             <value_type>0</value_type>
                             <allowed_hosts/>
@@ -6068,7 +6068,7 @@ last(&quot;sar.counter[q,,,runq-sz]&quot;) / last(&quot;sar.counter[q,,,plist-sz
                             <key>sar.counter[dp,,{#COUNTER},areq-sz]</key>
                             <delay>{$SAR_ZBX_POLL}</delay>
                             <history>{$SAR_ZBX_HISTORY}</history>
-                            <history>{$SAR_ZBX_TREND}</history>
+                            <trends>{$SAR_ZBX_TREND}</trends>
                             <status>0</status>
                             <value_type>0</value_type>
                             <allowed_hosts/>
@@ -6128,7 +6128,7 @@ last(&quot;sar.counter[q,,,runq-sz]&quot;) / last(&quot;sar.counter[q,,,plist-sz
                             <key>sar.counter[dp,,{#COUNTER},await]</key>
                             <delay>{$SAR_ZBX_POLL}</delay>
                             <history>{$SAR_ZBX_HISTORY}</history>
-                            <history>{$SAR_ZBX_TREND}</history>
+                            <trends>{$SAR_ZBX_TREND}</trends>
                             <status>0</status>
                             <value_type>0</value_type>
                             <allowed_hosts/>
@@ -6188,7 +6188,7 @@ last(&quot;sar.counter[q,,,runq-sz]&quot;) / last(&quot;sar.counter[q,,,plist-sz
                             <key>sar.counter[dp,,{#COUNTER},rkB/s]</key>
                             <delay>{$SAR_ZBX_POLL}</delay>
                             <history>{$SAR_ZBX_HISTORY}</history>
-                            <history>{$SAR_ZBX_TREND}</history>
+                            <trends>{$SAR_ZBX_TREND}</trends>
                             <status>0</status>
                             <value_type>0</value_type>
                             <allowed_hosts/>
@@ -6248,7 +6248,7 @@ last(&quot;sar.counter[q,,,runq-sz]&quot;) / last(&quot;sar.counter[q,,,plist-sz
                             <key>sar.counter[dp,,{#COUNTER},tps]</key>
                             <delay>{$SAR_ZBX_POLL}</delay>
                             <history>{$SAR_ZBX_HISTORY}</history>
-                            <history>{$SAR_ZBX_TREND}</history>
+                            <trends>{$SAR_ZBX_TREND}</trends>
                             <status>0</status>
                             <value_type>0</value_type>
                             <allowed_hosts/>
@@ -6308,7 +6308,7 @@ last(&quot;sar.counter[q,,,runq-sz]&quot;) / last(&quot;sar.counter[q,,,plist-sz
                             <key>sar.counter[dp,,{#COUNTER},wkB/s]</key>
                             <delay>{$SAR_ZBX_POLL}</delay>
                             <history>{$SAR_ZBX_HISTORY}</history>
-                            <history>{$SAR_ZBX_TREND}</history>
+                            <trends>{$SAR_ZBX_TREND}</trends>
                             <status>0</status>
                             <value_type>0</value_type>
                             <allowed_hosts/>
@@ -6689,7 +6689,7 @@ If you intentionally tuned (or even not) disk's scheduler, ignore this or correc
                             <key>sar.counter[F,,{#COUNTER},%Iused]</key>
                             <delay>{$SAR_ZBX_POLL}</delay>
                             <history>{$SAR_ZBX_HISTORY}</history>
-                            <history>{$SAR_ZBX_TREND}</history>
+                            <trends>{$SAR_ZBX_TREND}</trends>
                             <status>0</status>
                             <value_type>0</value_type>
                             <allowed_hosts/>
@@ -6749,7 +6749,7 @@ If you intentionally tuned (or even not) disk's scheduler, ignore this or correc
                             <key>sar.counter[F,,{#COUNTER},%ufsused]</key>
                             <delay>{$SAR_ZBX_POLL}</delay>
                             <history>{$SAR_ZBX_HISTORY}</history>
-                            <history>{$SAR_ZBX_TREND}</history>
+                            <trends>{$SAR_ZBX_TREND}</trends>
                             <status>0</status>
                             <value_type>0</value_type>
                             <allowed_hosts/>
@@ -6809,7 +6809,7 @@ If you intentionally tuned (or even not) disk's scheduler, ignore this or correc
                             <key>sar.counter[F,,{#COUNTER},Ifree]</key>
                             <delay>{$SAR_ZBX_POLL}</delay>
                             <history>{$SAR_ZBX_HISTORY}</history>
-                            <history>{$SAR_ZBX_TREND}</history>
+                            <trends>{$SAR_ZBX_TREND}</trends>
                             <status>0</status>
                             <value_type>0</value_type>
                             <allowed_hosts/>
@@ -6869,7 +6869,7 @@ If you intentionally tuned (or even not) disk's scheduler, ignore this or correc
                             <key>sar.counter[F,,{#COUNTER},Iused]</key>
                             <delay>{$SAR_ZBX_POLL}</delay>
                             <history>{$SAR_ZBX_HISTORY}</history>
-                            <history>{$SAR_ZBX_TREND}</history>
+                            <trends>{$SAR_ZBX_TREND}</trends>
                             <status>0</status>
                             <value_type>0</value_type>
                             <allowed_hosts/>
@@ -6929,7 +6929,7 @@ If you intentionally tuned (or even not) disk's scheduler, ignore this or correc
                             <key>sar.counter[F,,{#COUNTER},MBfsfree]</key>
                             <delay>{$SAR_ZBX_POLL}</delay>
                             <history>{$SAR_ZBX_HISTORY}</history>
-                            <history>{$SAR_ZBX_TREND}</history>
+                            <trends>{$SAR_ZBX_TREND}</trends>
                             <status>0</status>
                             <value_type>0</value_type>
                             <allowed_hosts/>
@@ -6989,7 +6989,7 @@ If you intentionally tuned (or even not) disk's scheduler, ignore this or correc
                             <key>sar.counter[F,,{#COUNTER},MBfsused]</key>
                             <delay>{$SAR_ZBX_POLL}</delay>
                             <history>{$SAR_ZBX_HISTORY}</history>
-                            <history>{$SAR_ZBX_TREND}</history>
+                            <trends>{$SAR_ZBX_TREND}</trends>
                             <status>0</status>
                             <value_type>0</value_type>
                             <allowed_hosts/>
@@ -7259,7 +7259,7 @@ If you intentionally tuned (or even not) disk's scheduler, ignore this or correc
                             <key>sar.counter[m,FAN,{#COUNTER},rpm]</key>
                             <delay>{$SAR_ZBX_POLL}</delay>
                             <history>{$SAR_ZBX_HISTORY}</history>
-                            <history>{$SAR_ZBX_TREND}</history>
+                            <trends>{$SAR_ZBX_TREND}</trends>
                             <status>0</status>
                             <value_type>0</value_type>
                             <allowed_hosts/>
@@ -7417,7 +7417,7 @@ If you intentionally tuned (or even not) disk's scheduler, ignore this or correc
                             <key>sar.counter[m,IN,{#COUNTER},inV]</key>
                             <delay>{$SAR_ZBX_POLL}</delay>
                             <history>{$SAR_ZBX_HISTORY}</history>
-                            <history>{$SAR_ZBX_TREND}</history>
+                            <trends>{$SAR_ZBX_TREND}</trends>
                             <status>0</status>
                             <value_type>0</value_type>
                             <allowed_hosts/>
@@ -7575,7 +7575,7 @@ If you intentionally tuned (or even not) disk's scheduler, ignore this or correc
                             <key>sar.counter[m,TEMP,{#COUNTER},degC]</key>
                             <delay>{$SAR_ZBX_POLL}</delay>
                             <history>{$SAR_ZBX_HISTORY}</history>
-                            <history>{$SAR_ZBX_TREND}</history>
+                            <trends>{$SAR_ZBX_TREND}</trends>
                             <status>0</status>
                             <value_type>0</value_type>
                             <allowed_hosts/>
@@ -7750,7 +7750,7 @@ If you intentionally tuned (or even not) disk's scheduler, ignore this or correc
                             <key>sar.counter[n,DEV,{#COUNTER},%ifutil]</key>
                             <delay>{$SAR_ZBX_POLL}</delay>
                             <history>{$SAR_ZBX_HISTORY}</history>
-                            <history>{$SAR_ZBX_TREND}</history>
+                            <trends>{$SAR_ZBX_TREND}</trends>
                             <status>0</status>
                             <value_type>0</value_type>
                             <allowed_hosts/>
@@ -7810,7 +7810,7 @@ If you intentionally tuned (or even not) disk's scheduler, ignore this or correc
                             <key>sar.counter[n,DEV,{#COUNTER},rxkB/s]</key>
                             <delay>{$SAR_ZBX_POLL}</delay>
                             <history>{$SAR_ZBX_HISTORY}</history>
-                            <history>{$SAR_ZBX_TREND}</history>
+                            <trends>{$SAR_ZBX_TREND}</trends>
                             <status>0</status>
                             <value_type>0</value_type>
                             <allowed_hosts/>
@@ -7870,7 +7870,7 @@ If you intentionally tuned (or even not) disk's scheduler, ignore this or correc
                             <key>sar.counter[n,DEV,{#COUNTER},rxpck/s]</key>
                             <delay>{$SAR_ZBX_POLL}</delay>
                             <history>{$SAR_ZBX_HISTORY}</history>
-                            <history>{$SAR_ZBX_TREND}</history>
+                            <trends>{$SAR_ZBX_TREND}</trends>
                             <status>0</status>
                             <value_type>0</value_type>
                             <allowed_hosts/>
@@ -7930,7 +7930,7 @@ If you intentionally tuned (or even not) disk's scheduler, ignore this or correc
                             <key>sar.counter[n,DEV,{#COUNTER},txkB/s]</key>
                             <delay>{$SAR_ZBX_POLL}</delay>
                             <history>{$SAR_ZBX_HISTORY}</history>
-                            <history>{$SAR_ZBX_TREND}</history>
+                            <trends>{$SAR_ZBX_TREND}</trends>
                             <status>0</status>
                             <value_type>0</value_type>
                             <allowed_hosts/>
@@ -7990,7 +7990,7 @@ If you intentionally tuned (or even not) disk's scheduler, ignore this or correc
                             <key>sar.counter[n,DEV,{#COUNTER},txpck/s]</key>
                             <delay>{$SAR_ZBX_POLL}</delay>
                             <history>{$SAR_ZBX_HISTORY}</history>
-                            <history>{$SAR_ZBX_TREND}</history>
+                            <trends>{$SAR_ZBX_TREND}</trends>
                             <status>0</status>
                             <value_type>0</value_type>
                             <allowed_hosts/>
@@ -8050,7 +8050,7 @@ If you intentionally tuned (or even not) disk's scheduler, ignore this or correc
                             <key>sar.counter[n,EDEV,{#COUNTER},coll/s]</key>
                             <delay>{$SAR_ZBX_POLL}</delay>
                             <history>{$SAR_ZBX_HISTORY}</history>
-                            <history>{$SAR_ZBX_TREND}</history>
+                            <trends>{$SAR_ZBX_TREND}</trends>
                             <status>0</status>
                             <value_type>0</value_type>
                             <allowed_hosts/>
@@ -8110,7 +8110,7 @@ If you intentionally tuned (or even not) disk's scheduler, ignore this or correc
                             <key>sar.counter[n,EDEV,{#COUNTER},rxdrop/s]</key>
                             <delay>{$SAR_ZBX_POLL}</delay>
                             <history>{$SAR_ZBX_HISTORY}</history>
-                            <history>{$SAR_ZBX_TREND}</history>
+                            <trends>{$SAR_ZBX_TREND}</trends>
                             <status>0</status>
                             <value_type>0</value_type>
                             <allowed_hosts/>
@@ -8170,7 +8170,7 @@ If you intentionally tuned (or even not) disk's scheduler, ignore this or correc
                             <key>sar.counter[n,EDEV,{#COUNTER},rxerr/s]</key>
                             <delay>{$SAR_ZBX_POLL}</delay>
                             <history>{$SAR_ZBX_HISTORY}</history>
-                            <history>{$SAR_ZBX_TREND}</history>
+                            <trends>{$SAR_ZBX_TREND}</trends>
                             <status>0</status>
                             <value_type>0</value_type>
                             <allowed_hosts/>
@@ -8230,7 +8230,7 @@ If you intentionally tuned (or even not) disk's scheduler, ignore this or correc
                             <key>sar.counter[n,EDEV,{#COUNTER},rxfifo/s]</key>
                             <delay>{$SAR_ZBX_POLL}</delay>
                             <history>{$SAR_ZBX_HISTORY}</history>
-                            <history>{$SAR_ZBX_TREND}</history>
+                            <trends>{$SAR_ZBX_TREND}</trends>
                             <status>0</status>
                             <value_type>0</value_type>
                             <allowed_hosts/>
@@ -8290,7 +8290,7 @@ If you intentionally tuned (or even not) disk's scheduler, ignore this or correc
                             <key>sar.counter[n,EDEV,{#COUNTER},rxfram/s]</key>
                             <delay>{$SAR_ZBX_POLL}</delay>
                             <history>{$SAR_ZBX_HISTORY}</history>
-                            <history>{$SAR_ZBX_TREND}</history>
+                            <trends>{$SAR_ZBX_TREND}</trends>
                             <status>0</status>
                             <value_type>0</value_type>
                             <allowed_hosts/>
@@ -8350,7 +8350,7 @@ If you intentionally tuned (or even not) disk's scheduler, ignore this or correc
                             <key>sar.counter[n,EDEV,{#COUNTER},txcarr/s]</key>
                             <delay>{$SAR_ZBX_POLL}</delay>
                             <history>{$SAR_ZBX_HISTORY}</history>
-                            <history>{$SAR_ZBX_TREND}</history>
+                            <trends>{$SAR_ZBX_TREND}</trends>
                             <status>0</status>
                             <value_type>0</value_type>
                             <allowed_hosts/>
@@ -8410,7 +8410,7 @@ If you intentionally tuned (or even not) disk's scheduler, ignore this or correc
                             <key>sar.counter[n,EDEV,{#COUNTER},txdrop/s]</key>
                             <delay>{$SAR_ZBX_POLL}</delay>
                             <history>{$SAR_ZBX_HISTORY}</history>
-                            <history>{$SAR_ZBX_TREND}</history>
+                            <trends>{$SAR_ZBX_TREND}</trends>
                             <status>0</status>
                             <value_type>0</value_type>
                             <allowed_hosts/>
@@ -8470,7 +8470,7 @@ If you intentionally tuned (or even not) disk's scheduler, ignore this or correc
                             <key>sar.counter[n,EDEV,{#COUNTER},txerr/s]</key>
                             <delay>{$SAR_ZBX_POLL}</delay>
                             <history>{$SAR_ZBX_HISTORY}</history>
-                            <history>{$SAR_ZBX_TREND}</history>
+                            <trends>{$SAR_ZBX_TREND}</trends>
                             <status>0</status>
                             <value_type>0</value_type>
                             <allowed_hosts/>
@@ -8530,7 +8530,7 @@ If you intentionally tuned (or even not) disk's scheduler, ignore this or correc
                             <key>sar.counter[n,EDEV,{#COUNTER},txfifo/s]</key>
                             <delay>{$SAR_ZBX_POLL}</delay>
                             <history>{$SAR_ZBX_HISTORY}</history>
-                            <history>{$SAR_ZBX_TREND}</history>
+                            <trends>{$SAR_ZBX_TREND}</trends>
                             <status>0</status>
                             <value_type>0</value_type>
                             <allowed_hosts/>
@@ -8590,7 +8590,7 @@ If you intentionally tuned (or even not) disk's scheduler, ignore this or correc
                             <key>sar.net.errors[{#COUNTER}]</key>
                             <delay>{$SAR_ZBX_POLL}</delay>
                             <history>{$SAR_ZBX_HISTORY}</history>
-                            <history>{$SAR_ZBX_TREND}</history>
+                            <trends>{$SAR_ZBX_TREND}</trends>
                             <status>0</status>
                             <value_type>0</value_type>
                             <allowed_hosts/>
@@ -8658,7 +8658,7 @@ last(&quot;sar.counter[n,EDEV,{#COUNTER},txfifo/s]&quot;)</params>
                             <key>sar.net.rxpayload[{#COUNTER}]</key>
                             <delay>{$SAR_ZBX_POLL}</delay>
                             <history>{$SAR_ZBX_HISTORY}</history>
-                            <history>{$SAR_ZBX_TREND}</history>
+                            <trends>{$SAR_ZBX_TREND}</trends>
                             <status>0</status>
                             <value_type>0</value_type>
                             <allowed_hosts/>
@@ -8718,7 +8718,7 @@ last(&quot;sar.counter[n,EDEV,{#COUNTER},txfifo/s]&quot;)</params>
                             <key>sar.net.txpayload[{#COUNTER}]</key>
                             <delay>{$SAR_ZBX_POLL}</delay>
                             <history>{$SAR_ZBX_HISTORY}</history>
-                            <history>{$SAR_ZBX_TREND}</history>
+                            <trends>{$SAR_ZBX_TREND}</trends>
                             <status>0</status>
                             <value_type>0</value_type>
                             <allowed_hosts/>
