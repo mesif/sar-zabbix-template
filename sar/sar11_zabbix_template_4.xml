@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
-    <version>4.0</version>
-    <date>2019-04-12T16:15:23Z</date>
+    <version>4.2</version>
+    <date>2019-08-24T12:20:10Z</date>
     <groups>
         <group>
             <name>Linux servers</name>
@@ -50,9 +50,9 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[%memavail]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    {$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -109,9 +109,9 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[b,,,bread/s]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    {$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -168,9 +168,9 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[b,,,bwrtn/s]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -227,9 +227,9 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[B,,,fault/s]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -286,9 +286,9 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[B,,,majflt/s]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -345,9 +345,9 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[B,,,pgfree/s]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -404,9 +404,9 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[B,,,pgpgin/s]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -463,9 +463,9 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[B,,,pgpgout/s]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -522,9 +522,9 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[B,,,pgscand/s]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -581,9 +581,9 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[B,,,pgscank/s]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -640,9 +640,9 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[B,,,pgsteal/s]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -699,9 +699,9 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[b,,,rtps]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -758,9 +758,9 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[b,,,tps]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -817,9 +817,9 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[b,,,wtps]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -876,9 +876,9 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[H,,,%hugused]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -935,9 +935,9 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[H,,,kbhugfree]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -994,9 +994,9 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[H,,,kbhugused]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -1053,9 +1053,9 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[m,CPU,,MHz]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -1112,9 +1112,9 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[n,EICMP,idstunr/s]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -1171,9 +1171,9 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[n,EICMP,ierr/s]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -1230,9 +1230,9 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[n,EICMP,odstunr/s]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -1289,9 +1289,9 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[n,EICMP,oerr/s]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -1348,9 +1348,9 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[n,EIP,,iadrerr/s]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -1407,9 +1407,9 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[n,EIP,,idisc/s]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -1466,9 +1466,9 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[n,EIP,,ihdrerr/s]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -1525,9 +1525,9 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[n,EIP,,iukwnpr/s]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -1584,9 +1584,9 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[n,EIP,,odisc/s]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -1643,9 +1643,9 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[n,ETCP,,atmptf/s]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -1702,9 +1702,9 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[n,ETCP,,estres/s]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -1761,9 +1761,9 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[n,ETCP,,isegerr/s]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -1820,9 +1820,9 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[n,ETCP,,orsts/s]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -1879,9 +1879,9 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[n,ETCP,,retrans/s]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -1938,9 +1938,9 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[n,ICMP,iech/s]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -1997,9 +1997,9 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[n,ICMP,iechr/s]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -2056,9 +2056,9 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[n,ICMP,imsg/s]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -2115,9 +2115,9 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[n,ICMP,oech/s]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -2174,9 +2174,9 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[n,ICMP,oechr/s]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -2233,9 +2233,9 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[n,ICMP,omsg/s]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -2292,9 +2292,9 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[n,IP,,fwddgm/s]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -2351,9 +2351,9 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[n,IP,,idel/s]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -2410,9 +2410,9 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[n,IP,,irec/s]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -2469,9 +2469,9 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[n,IP,,orq/s]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -2528,9 +2528,9 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[n,SOCK,,ip-frag]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -2587,9 +2587,9 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[n,SOCK,,rawsck]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -2646,9 +2646,9 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[n,SOCK,,tcp-tw]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -2705,9 +2705,9 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[n,SOCK,,tcpsck]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -2764,9 +2764,9 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[n,SOCK,,totsck]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -2823,9 +2823,9 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[n,SOCK,,udpsck]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -2882,9 +2882,9 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[n,TCP,,active/s]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -2941,9 +2941,9 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[n,TCP,,iseg/s]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -3000,9 +3000,9 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[n,TCP,,oseg/s]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -3059,9 +3059,9 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[n,TCP,,passive/s]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -3118,9 +3118,9 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[n,UDP,,idgm/s]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -3177,9 +3177,9 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[n,UDP,,idgmerr/s]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -3236,9 +3236,9 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[n,UDP,,noport/s]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -3295,9 +3295,9 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[n,UDP,,odgm/s]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -3354,9 +3354,9 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[q,,,blocked]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -3416,9 +3416,9 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[q,,,ldavg-15]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -3475,9 +3475,9 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[q,,,plist-sz]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -3534,9 +3534,9 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[q,,,runq-sz]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -3593,9 +3593,9 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[r,,,%commit]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -3652,9 +3652,9 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[r,,,%memused]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -3711,9 +3711,9 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[r,,,kbactive]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -3770,9 +3770,9 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[r,,,kbbuffers]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -3829,9 +3829,9 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[r,,,kbcached]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -3888,9 +3888,9 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[r,,,kbcommit]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -3947,9 +3947,9 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[r,,,kbdirty]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -4006,9 +4006,9 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[r,,,kbinact]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -4065,9 +4065,9 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[r,,,kbmemfree]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -4124,9 +4124,9 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[r,,,kbmemused]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -4183,9 +4183,9 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[r,ALL,,kbanonpg]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -4242,9 +4242,9 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[r,ALL,,kbavail]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -4301,9 +4301,9 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[r,ALL,,kbkstack]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -4360,9 +4360,9 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[r,ALL,,kbpgtbl]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -4419,9 +4419,9 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[r,ALL,,kbslab]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -4478,9 +4478,9 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[r,ALL,,kbvmused]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -4537,9 +4537,9 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[S,,,%swpcad]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -4596,9 +4596,9 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[S,,,%swpused]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -4655,9 +4655,9 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[S,,,kbswpcad]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -4714,9 +4714,9 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[S,,,kbswpfree]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -4773,9 +4773,9 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[S,,,kbswpused]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -4832,9 +4832,9 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[u,ALL,,%guest]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -4891,9 +4891,9 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[u,ALL,,%idle]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -4951,9 +4951,9 @@ Note: On SMP machines a processor that does not have any activity at all (0.00 f
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[u,ALL,,%iowait]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -5013,9 +5013,9 @@ Note: On SMP machines a processor that does not have any activity at all (0.00 f
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[u,ALL,,%irq]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -5072,9 +5072,9 @@ Note: On SMP machines a processor that does not have any activity at all (0.00 f
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[u,ALL,,%nice]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -5131,9 +5131,9 @@ Note: On SMP machines a processor that does not have any activity at all (0.00 f
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[u,ALL,,%soft]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -5190,9 +5190,9 @@ Note: On SMP machines a processor that does not have any activity at all (0.00 f
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[u,ALL,,%steal]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -5249,9 +5249,9 @@ Note: On SMP machines a processor that does not have any activity at all (0.00 f
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[u,ALL,,%sys]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -5308,9 +5308,9 @@ Note: On SMP machines a processor that does not have any activity at all (0.00 f
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[u,ALL,,%usr]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -5367,9 +5367,9 @@ Note: On SMP machines a processor that does not have any activity at all (0.00 f
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[v,,,dentunusd]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -5426,9 +5426,9 @@ Note: On SMP machines a processor that does not have any activity at all (0.00 f
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[v,,,file-nr]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -5485,9 +5485,9 @@ Note: On SMP machines a processor that does not have any activity at all (0.00 f
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[v,,,inode-nr]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -5544,9 +5544,9 @@ Note: On SMP machines a processor that does not have any activity at all (0.00 f
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[w,,,cswch/s]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -5603,9 +5603,9 @@ Note: On SMP machines a processor that does not have any activity at all (0.00 f
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[w,,,proc/s]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -5662,9 +5662,9 @@ Note: On SMP machines a processor that does not have any activity at all (0.00 f
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[W,,,pswpin/s]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -5721,9 +5721,9 @@ Note: On SMP machines a processor that does not have any activity at all (0.00 f
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.counter[W,,,pswpout/s]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -5780,9 +5780,9 @@ Note: On SMP machines a processor that does not have any activity at all (0.00 f
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sar.cpu.lat[]</key>
-                    <delay>10m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>{$SAR_ZBX_POLL}</delay>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -5841,8 +5841,8 @@ last(&quot;sar.counter[q,,,runq-sz]&quot;) / last(&quot;sar.counter[q,,,plist-sz
                     <snmp_oid/>
                     <key>system.cpu.num[]</key>
                     <delay>60m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <history>{$SAR_ZBX_HISTORY}</history>
+                    <trends>{$SAR_ZBX_TREND}</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -5925,13 +5925,13 @@ last(&quot;sar.counter[q,,,runq-sz]&quot;) / last(&quot;sar.counter[q,,,plist-sz
                         <conditions>
                             <condition>
                                 <macro>{#COUNTER}</macro>
-                                <value>^sr[0-9]$</value>
+                                <value>^fd[0-9]$</value>
                                 <operator>9</operator>
                                 <formulaid>B</formulaid>
                             </condition>
                             <condition>
                                 <macro>{#COUNTER}</macro>
-                                <value>^fd[0-9]$</value>
+                                <value>^sr[0-9]$</value>
                                 <operator>9</operator>
                                 <formulaid>A</formulaid>
                             </condition>
@@ -5946,9 +5946,9 @@ last(&quot;sar.counter[q,,,runq-sz]&quot;) / last(&quot;sar.counter[q,,,plist-sz
                             <snmp_community/>
                             <snmp_oid/>
                             <key>sar.counter[dp,,{#COUNTER},%util]</key>
-                            <delay>10m</delay>
-                            <history>90d</history>
-                            <trends>365d</trends>
+                            <delay>{$SAR_ZBX_POLL}</delay>
+                            <history>{$SAR_ZBX_HISTORY}</history>
+                            <history>{$SAR_ZBX_TREND}</history>
                             <status>0</status>
                             <value_type>0</value_type>
                             <allowed_hosts/>
@@ -6006,9 +6006,9 @@ last(&quot;sar.counter[q,,,runq-sz]&quot;) / last(&quot;sar.counter[q,,,plist-sz
                             <snmp_community/>
                             <snmp_oid/>
                             <key>sar.counter[dp,,{#COUNTER},aqu-sz]</key>
-                            <delay>10m</delay>
-                            <history>90d</history>
-                            <trends>365d</trends>
+                            <delay>{$SAR_ZBX_POLL}</delay>
+                            <history>{$SAR_ZBX_HISTORY}</history>
+                            <history>{$SAR_ZBX_TREND}</history>
                             <status>0</status>
                             <value_type>0</value_type>
                             <allowed_hosts/>
@@ -6066,9 +6066,9 @@ last(&quot;sar.counter[q,,,runq-sz]&quot;) / last(&quot;sar.counter[q,,,plist-sz
                             <snmp_community/>
                             <snmp_oid/>
                             <key>sar.counter[dp,,{#COUNTER},areq-sz]</key>
-                            <delay>10m</delay>
-                            <history>90d</history>
-                            <trends>365d</trends>
+                            <delay>{$SAR_ZBX_POLL}</delay>
+                            <history>{$SAR_ZBX_HISTORY}</history>
+                            <history>{$SAR_ZBX_TREND}</history>
                             <status>0</status>
                             <value_type>0</value_type>
                             <allowed_hosts/>
@@ -6126,9 +6126,9 @@ last(&quot;sar.counter[q,,,runq-sz]&quot;) / last(&quot;sar.counter[q,,,plist-sz
                             <snmp_community/>
                             <snmp_oid/>
                             <key>sar.counter[dp,,{#COUNTER},await]</key>
-                            <delay>10m</delay>
-                            <history>90d</history>
-                            <trends>365d</trends>
+                            <delay>{$SAR_ZBX_POLL}</delay>
+                            <history>{$SAR_ZBX_HISTORY}</history>
+                            <history>{$SAR_ZBX_TREND}</history>
                             <status>0</status>
                             <value_type>0</value_type>
                             <allowed_hosts/>
@@ -6186,9 +6186,9 @@ last(&quot;sar.counter[q,,,runq-sz]&quot;) / last(&quot;sar.counter[q,,,plist-sz
                             <snmp_community/>
                             <snmp_oid/>
                             <key>sar.counter[dp,,{#COUNTER},rkB/s]</key>
-                            <delay>10m</delay>
-                            <history>90d</history>
-                            <trends>365d</trends>
+                            <delay>{$SAR_ZBX_POLL}</delay>
+                            <history>{$SAR_ZBX_HISTORY}</history>
+                            <history>{$SAR_ZBX_TREND}</history>
                             <status>0</status>
                             <value_type>0</value_type>
                             <allowed_hosts/>
@@ -6246,9 +6246,9 @@ last(&quot;sar.counter[q,,,runq-sz]&quot;) / last(&quot;sar.counter[q,,,plist-sz
                             <snmp_community/>
                             <snmp_oid/>
                             <key>sar.counter[dp,,{#COUNTER},tps]</key>
-                            <delay>10m</delay>
-                            <history>90d</history>
-                            <trends>365d</trends>
+                            <delay>{$SAR_ZBX_POLL}</delay>
+                            <history>{$SAR_ZBX_HISTORY}</history>
+                            <history>{$SAR_ZBX_TREND}</history>
                             <status>0</status>
                             <value_type>0</value_type>
                             <allowed_hosts/>
@@ -6306,9 +6306,9 @@ last(&quot;sar.counter[q,,,runq-sz]&quot;) / last(&quot;sar.counter[q,,,plist-sz
                             <snmp_community/>
                             <snmp_oid/>
                             <key>sar.counter[dp,,{#COUNTER},wkB/s]</key>
-                            <delay>10m</delay>
-                            <history>90d</history>
-                            <trends>365d</trends>
+                            <delay>{$SAR_ZBX_POLL}</delay>
+                            <history>{$SAR_ZBX_HISTORY}</history>
+                            <history>{$SAR_ZBX_TREND}</history>
                             <status>0</status>
                             <value_type>0</value_type>
                             <allowed_hosts/>
@@ -6638,6 +6638,9 @@ If you intentionally tuned (or even not) disk's scheduler, ignore this or correc
                     <ssl_key_password/>
                     <verify_peer>0</verify_peer>
                     <verify_host>0</verify_host>
+                    <lld_macro_paths/>
+                    <preprocessing/>
+                    <master_item/>
                 </discovery_rule>
                 <discovery_rule>
                     <name>sar: fs: mnt discovery</name>
@@ -6684,9 +6687,9 @@ If you intentionally tuned (or even not) disk's scheduler, ignore this or correc
                             <snmp_community/>
                             <snmp_oid/>
                             <key>sar.counter[F,,{#COUNTER},%Iused]</key>
-                            <delay>10m</delay>
-                            <history>90d</history>
-                            <trends>365d</trends>
+                            <delay>{$SAR_ZBX_POLL}</delay>
+                            <history>{$SAR_ZBX_HISTORY}</history>
+                            <history>{$SAR_ZBX_TREND}</history>
                             <status>0</status>
                             <value_type>0</value_type>
                             <allowed_hosts/>
@@ -6744,9 +6747,9 @@ If you intentionally tuned (or even not) disk's scheduler, ignore this or correc
                             <snmp_community/>
                             <snmp_oid/>
                             <key>sar.counter[F,,{#COUNTER},%ufsused]</key>
-                            <delay>10m</delay>
-                            <history>90d</history>
-                            <trends>365d</trends>
+                            <delay>{$SAR_ZBX_POLL}</delay>
+                            <history>{$SAR_ZBX_HISTORY}</history>
+                            <history>{$SAR_ZBX_TREND}</history>
                             <status>0</status>
                             <value_type>0</value_type>
                             <allowed_hosts/>
@@ -6804,9 +6807,9 @@ If you intentionally tuned (or even not) disk's scheduler, ignore this or correc
                             <snmp_community/>
                             <snmp_oid/>
                             <key>sar.counter[F,,{#COUNTER},Ifree]</key>
-                            <delay>10m</delay>
-                            <history>90d</history>
-                            <trends>365d</trends>
+                            <delay>{$SAR_ZBX_POLL}</delay>
+                            <history>{$SAR_ZBX_HISTORY}</history>
+                            <history>{$SAR_ZBX_TREND}</history>
                             <status>0</status>
                             <value_type>0</value_type>
                             <allowed_hosts/>
@@ -6864,9 +6867,9 @@ If you intentionally tuned (or even not) disk's scheduler, ignore this or correc
                             <snmp_community/>
                             <snmp_oid/>
                             <key>sar.counter[F,,{#COUNTER},Iused]</key>
-                            <delay>10m</delay>
-                            <history>90d</history>
-                            <trends>365d</trends>
+                            <delay>{$SAR_ZBX_POLL}</delay>
+                            <history>{$SAR_ZBX_HISTORY}</history>
+                            <history>{$SAR_ZBX_TREND}</history>
                             <status>0</status>
                             <value_type>0</value_type>
                             <allowed_hosts/>
@@ -6924,9 +6927,9 @@ If you intentionally tuned (or even not) disk's scheduler, ignore this or correc
                             <snmp_community/>
                             <snmp_oid/>
                             <key>sar.counter[F,,{#COUNTER},MBfsfree]</key>
-                            <delay>10m</delay>
-                            <history>90d</history>
-                            <trends>365d</trends>
+                            <delay>{$SAR_ZBX_POLL}</delay>
+                            <history>{$SAR_ZBX_HISTORY}</history>
+                            <history>{$SAR_ZBX_TREND}</history>
                             <status>0</status>
                             <value_type>0</value_type>
                             <allowed_hosts/>
@@ -6984,9 +6987,9 @@ If you intentionally tuned (or even not) disk's scheduler, ignore this or correc
                             <snmp_community/>
                             <snmp_oid/>
                             <key>sar.counter[F,,{#COUNTER},MBfsused]</key>
-                            <delay>10m</delay>
-                            <history>90d</history>
-                            <trends>365d</trends>
+                            <delay>{$SAR_ZBX_POLL}</delay>
+                            <history>{$SAR_ZBX_HISTORY}</history>
+                            <history>{$SAR_ZBX_TREND}</history>
                             <status>0</status>
                             <value_type>0</value_type>
                             <allowed_hosts/>
@@ -7205,6 +7208,9 @@ If you intentionally tuned (or even not) disk's scheduler, ignore this or correc
                     <ssl_key_password/>
                     <verify_peer>0</verify_peer>
                     <verify_host>0</verify_host>
+                    <lld_macro_paths/>
+                    <preprocessing/>
+                    <master_item/>
                 </discovery_rule>
                 <discovery_rule>
                     <name>sar: pm: fan discovery</name>
@@ -7251,9 +7257,9 @@ If you intentionally tuned (or even not) disk's scheduler, ignore this or correc
                             <snmp_community/>
                             <snmp_oid/>
                             <key>sar.counter[m,FAN,{#COUNTER},rpm]</key>
-                            <delay>10m</delay>
-                            <history>90d</history>
-                            <trends>365d</trends>
+                            <delay>{$SAR_ZBX_POLL}</delay>
+                            <history>{$SAR_ZBX_HISTORY}</history>
+                            <history>{$SAR_ZBX_TREND}</history>
                             <status>0</status>
                             <value_type>0</value_type>
                             <allowed_hosts/>
@@ -7360,6 +7366,9 @@ If you intentionally tuned (or even not) disk's scheduler, ignore this or correc
                     <ssl_key_password/>
                     <verify_peer>0</verify_peer>
                     <verify_host>0</verify_host>
+                    <lld_macro_paths/>
+                    <preprocessing/>
+                    <master_item/>
                 </discovery_rule>
                 <discovery_rule>
                     <name>sar: pm: input discovery</name>
@@ -7406,9 +7415,9 @@ If you intentionally tuned (or even not) disk's scheduler, ignore this or correc
                             <snmp_community/>
                             <snmp_oid/>
                             <key>sar.counter[m,IN,{#COUNTER},inV]</key>
-                            <delay>10m</delay>
-                            <history>90d</history>
-                            <trends>365d</trends>
+                            <delay>{$SAR_ZBX_POLL}</delay>
+                            <history>{$SAR_ZBX_HISTORY}</history>
+                            <history>{$SAR_ZBX_TREND}</history>
                             <status>0</status>
                             <value_type>0</value_type>
                             <allowed_hosts/>
@@ -7515,6 +7524,9 @@ If you intentionally tuned (or even not) disk's scheduler, ignore this or correc
                     <ssl_key_password/>
                     <verify_peer>0</verify_peer>
                     <verify_host>0</verify_host>
+                    <lld_macro_paths/>
+                    <preprocessing/>
+                    <master_item/>
                 </discovery_rule>
                 <discovery_rule>
                     <name>sar: pm: temp discovery</name>
@@ -7561,9 +7573,9 @@ If you intentionally tuned (or even not) disk's scheduler, ignore this or correc
                             <snmp_community/>
                             <snmp_oid/>
                             <key>sar.counter[m,TEMP,{#COUNTER},degC]</key>
-                            <delay>10m</delay>
-                            <history>90d</history>
-                            <trends>365d</trends>
+                            <delay>{$SAR_ZBX_POLL}</delay>
+                            <history>{$SAR_ZBX_HISTORY}</history>
+                            <history>{$SAR_ZBX_TREND}</history>
                             <status>0</status>
                             <value_type>0</value_type>
                             <allowed_hosts/>
@@ -7687,6 +7699,9 @@ If you intentionally tuned (or even not) disk's scheduler, ignore this or correc
                     <ssl_key_password/>
                     <verify_peer>0</verify_peer>
                     <verify_host>0</verify_host>
+                    <lld_macro_paths/>
+                    <preprocessing/>
+                    <master_item/>
                 </discovery_rule>
                 <discovery_rule>
                     <name>sar: net: dev discovery</name>
@@ -7733,9 +7748,9 @@ If you intentionally tuned (or even not) disk's scheduler, ignore this or correc
                             <snmp_community/>
                             <snmp_oid/>
                             <key>sar.counter[n,DEV,{#COUNTER},%ifutil]</key>
-                            <delay>10m</delay>
-                            <history>90d</history>
-                            <trends>365d</trends>
+                            <delay>{$SAR_ZBX_POLL}</delay>
+                            <history>{$SAR_ZBX_HISTORY}</history>
+                            <history>{$SAR_ZBX_TREND}</history>
                             <status>0</status>
                             <value_type>0</value_type>
                             <allowed_hosts/>
@@ -7793,9 +7808,9 @@ If you intentionally tuned (or even not) disk's scheduler, ignore this or correc
                             <snmp_community/>
                             <snmp_oid/>
                             <key>sar.counter[n,DEV,{#COUNTER},rxkB/s]</key>
-                            <delay>10m</delay>
-                            <history>90d</history>
-                            <trends>365d</trends>
+                            <delay>{$SAR_ZBX_POLL}</delay>
+                            <history>{$SAR_ZBX_HISTORY}</history>
+                            <history>{$SAR_ZBX_TREND}</history>
                             <status>0</status>
                             <value_type>0</value_type>
                             <allowed_hosts/>
@@ -7853,9 +7868,9 @@ If you intentionally tuned (or even not) disk's scheduler, ignore this or correc
                             <snmp_community/>
                             <snmp_oid/>
                             <key>sar.counter[n,DEV,{#COUNTER},rxpck/s]</key>
-                            <delay>10m</delay>
-                            <history>90d</history>
-                            <trends>365d</trends>
+                            <delay>{$SAR_ZBX_POLL}</delay>
+                            <history>{$SAR_ZBX_HISTORY}</history>
+                            <history>{$SAR_ZBX_TREND}</history>
                             <status>0</status>
                             <value_type>0</value_type>
                             <allowed_hosts/>
@@ -7913,9 +7928,9 @@ If you intentionally tuned (or even not) disk's scheduler, ignore this or correc
                             <snmp_community/>
                             <snmp_oid/>
                             <key>sar.counter[n,DEV,{#COUNTER},txkB/s]</key>
-                            <delay>10m</delay>
-                            <history>90d</history>
-                            <trends>365d</trends>
+                            <delay>{$SAR_ZBX_POLL}</delay>
+                            <history>{$SAR_ZBX_HISTORY}</history>
+                            <history>{$SAR_ZBX_TREND}</history>
                             <status>0</status>
                             <value_type>0</value_type>
                             <allowed_hosts/>
@@ -7973,9 +7988,9 @@ If you intentionally tuned (or even not) disk's scheduler, ignore this or correc
                             <snmp_community/>
                             <snmp_oid/>
                             <key>sar.counter[n,DEV,{#COUNTER},txpck/s]</key>
-                            <delay>10m</delay>
-                            <history>90d</history>
-                            <trends>365d</trends>
+                            <delay>{$SAR_ZBX_POLL}</delay>
+                            <history>{$SAR_ZBX_HISTORY}</history>
+                            <history>{$SAR_ZBX_TREND}</history>
                             <status>0</status>
                             <value_type>0</value_type>
                             <allowed_hosts/>
@@ -8033,9 +8048,9 @@ If you intentionally tuned (or even not) disk's scheduler, ignore this or correc
                             <snmp_community/>
                             <snmp_oid/>
                             <key>sar.counter[n,EDEV,{#COUNTER},coll/s]</key>
-                            <delay>10m</delay>
-                            <history>90d</history>
-                            <trends>365d</trends>
+                            <delay>{$SAR_ZBX_POLL}</delay>
+                            <history>{$SAR_ZBX_HISTORY}</history>
+                            <history>{$SAR_ZBX_TREND}</history>
                             <status>0</status>
                             <value_type>0</value_type>
                             <allowed_hosts/>
@@ -8093,9 +8108,9 @@ If you intentionally tuned (or even not) disk's scheduler, ignore this or correc
                             <snmp_community/>
                             <snmp_oid/>
                             <key>sar.counter[n,EDEV,{#COUNTER},rxdrop/s]</key>
-                            <delay>10m</delay>
-                            <history>90d</history>
-                            <trends>365d</trends>
+                            <delay>{$SAR_ZBX_POLL}</delay>
+                            <history>{$SAR_ZBX_HISTORY}</history>
+                            <history>{$SAR_ZBX_TREND}</history>
                             <status>0</status>
                             <value_type>0</value_type>
                             <allowed_hosts/>
@@ -8153,9 +8168,9 @@ If you intentionally tuned (or even not) disk's scheduler, ignore this or correc
                             <snmp_community/>
                             <snmp_oid/>
                             <key>sar.counter[n,EDEV,{#COUNTER},rxerr/s]</key>
-                            <delay>10m</delay>
-                            <history>90d</history>
-                            <trends>365d</trends>
+                            <delay>{$SAR_ZBX_POLL}</delay>
+                            <history>{$SAR_ZBX_HISTORY}</history>
+                            <history>{$SAR_ZBX_TREND}</history>
                             <status>0</status>
                             <value_type>0</value_type>
                             <allowed_hosts/>
@@ -8213,9 +8228,9 @@ If you intentionally tuned (or even not) disk's scheduler, ignore this or correc
                             <snmp_community/>
                             <snmp_oid/>
                             <key>sar.counter[n,EDEV,{#COUNTER},rxfifo/s]</key>
-                            <delay>10m</delay>
-                            <history>90d</history>
-                            <trends>365d</trends>
+                            <delay>{$SAR_ZBX_POLL}</delay>
+                            <history>{$SAR_ZBX_HISTORY}</history>
+                            <history>{$SAR_ZBX_TREND}</history>
                             <status>0</status>
                             <value_type>0</value_type>
                             <allowed_hosts/>
@@ -8273,9 +8288,9 @@ If you intentionally tuned (or even not) disk's scheduler, ignore this or correc
                             <snmp_community/>
                             <snmp_oid/>
                             <key>sar.counter[n,EDEV,{#COUNTER},rxfram/s]</key>
-                            <delay>10m</delay>
-                            <history>90d</history>
-                            <trends>365d</trends>
+                            <delay>{$SAR_ZBX_POLL}</delay>
+                            <history>{$SAR_ZBX_HISTORY}</history>
+                            <history>{$SAR_ZBX_TREND}</history>
                             <status>0</status>
                             <value_type>0</value_type>
                             <allowed_hosts/>
@@ -8333,9 +8348,9 @@ If you intentionally tuned (or even not) disk's scheduler, ignore this or correc
                             <snmp_community/>
                             <snmp_oid/>
                             <key>sar.counter[n,EDEV,{#COUNTER},txcarr/s]</key>
-                            <delay>10m</delay>
-                            <history>90d</history>
-                            <trends>365d</trends>
+                            <delay>{$SAR_ZBX_POLL}</delay>
+                            <history>{$SAR_ZBX_HISTORY}</history>
+                            <history>{$SAR_ZBX_TREND}</history>
                             <status>0</status>
                             <value_type>0</value_type>
                             <allowed_hosts/>
@@ -8393,9 +8408,9 @@ If you intentionally tuned (or even not) disk's scheduler, ignore this or correc
                             <snmp_community/>
                             <snmp_oid/>
                             <key>sar.counter[n,EDEV,{#COUNTER},txdrop/s]</key>
-                            <delay>10m</delay>
-                            <history>90d</history>
-                            <trends>365d</trends>
+                            <delay>{$SAR_ZBX_POLL}</delay>
+                            <history>{$SAR_ZBX_HISTORY}</history>
+                            <history>{$SAR_ZBX_TREND}</history>
                             <status>0</status>
                             <value_type>0</value_type>
                             <allowed_hosts/>
@@ -8453,9 +8468,9 @@ If you intentionally tuned (or even not) disk's scheduler, ignore this or correc
                             <snmp_community/>
                             <snmp_oid/>
                             <key>sar.counter[n,EDEV,{#COUNTER},txerr/s]</key>
-                            <delay>10m</delay>
-                            <history>90d</history>
-                            <trends>365d</trends>
+                            <delay>{$SAR_ZBX_POLL}</delay>
+                            <history>{$SAR_ZBX_HISTORY}</history>
+                            <history>{$SAR_ZBX_TREND}</history>
                             <status>0</status>
                             <value_type>0</value_type>
                             <allowed_hosts/>
@@ -8513,9 +8528,9 @@ If you intentionally tuned (or even not) disk's scheduler, ignore this or correc
                             <snmp_community/>
                             <snmp_oid/>
                             <key>sar.counter[n,EDEV,{#COUNTER},txfifo/s]</key>
-                            <delay>10m</delay>
-                            <history>90d</history>
-                            <trends>365d</trends>
+                            <delay>{$SAR_ZBX_POLL}</delay>
+                            <history>{$SAR_ZBX_HISTORY}</history>
+                            <history>{$SAR_ZBX_TREND}</history>
                             <status>0</status>
                             <value_type>0</value_type>
                             <allowed_hosts/>
@@ -8573,9 +8588,9 @@ If you intentionally tuned (or even not) disk's scheduler, ignore this or correc
                             <snmp_community/>
                             <snmp_oid/>
                             <key>sar.net.errors[{#COUNTER}]</key>
-                            <delay>10m</delay>
-                            <history>90d</history>
-                            <trends>365d</trends>
+                            <delay>{$SAR_ZBX_POLL}</delay>
+                            <history>{$SAR_ZBX_HISTORY}</history>
+                            <history>{$SAR_ZBX_TREND}</history>
                             <status>0</status>
                             <value_type>0</value_type>
                             <allowed_hosts/>
@@ -8641,9 +8656,9 @@ last(&quot;sar.counter[n,EDEV,{#COUNTER},txfifo/s]&quot;)</params>
                             <snmp_community/>
                             <snmp_oid/>
                             <key>sar.net.rxpayload[{#COUNTER}]</key>
-                            <delay>10m</delay>
-                            <history>90d</history>
-                            <trends>365d</trends>
+                            <delay>{$SAR_ZBX_POLL}</delay>
+                            <history>{$SAR_ZBX_HISTORY}</history>
+                            <history>{$SAR_ZBX_TREND}</history>
                             <status>0</status>
                             <value_type>0</value_type>
                             <allowed_hosts/>
@@ -8701,9 +8716,9 @@ last(&quot;sar.counter[n,EDEV,{#COUNTER},txfifo/s]&quot;)</params>
                             <snmp_community/>
                             <snmp_oid/>
                             <key>sar.net.txpayload[{#COUNTER}]</key>
-                            <delay>10m</delay>
-                            <history>90d</history>
-                            <trends>365d</trends>
+                            <delay>{$SAR_ZBX_POLL}</delay>
+                            <history>{$SAR_ZBX_HISTORY}</history>
+                            <history>{$SAR_ZBX_TREND}</history>
                             <status>0</status>
                             <value_type>0</value_type>
                             <allowed_hosts/>
@@ -8947,6 +8962,9 @@ last(&quot;sar.counter[n,EDEV,{#COUNTER},txfifo/s]&quot;)</params>
                     <ssl_key_password/>
                     <verify_peer>0</verify_peer>
                     <verify_host>0</verify_host>
+                    <lld_macro_paths/>
+                    <preprocessing/>
+                    <master_item/>
                 </discovery_rule>
                 <discovery_rule>
                     <name>sar: cpu: cpu discovery</name>
@@ -8993,9 +9011,9 @@ last(&quot;sar.counter[n,EDEV,{#COUNTER},txfifo/s]&quot;)</params>
                             <snmp_community/>
                             <snmp_oid/>
                             <key>sar.counter[u,ALL -P ALL,{#COUNTER},%guest]</key>
-                            <delay>10m</delay>
-                            <history>90d</history>
-                            <trends>365d</trends>
+                            <delay>{$SAR_ZBX_POLL}</delay>
+                            <history>{$SAR_ZBX_HISTORY}</history>
+                            <trends>{$SAR_ZBX_TREND}</trends>
                             <status>0</status>
                             <value_type>0</value_type>
                             <allowed_hosts/>
@@ -9053,9 +9071,9 @@ last(&quot;sar.counter[n,EDEV,{#COUNTER},txfifo/s]&quot;)</params>
                             <snmp_community/>
                             <snmp_oid/>
                             <key>sar.counter[u,ALL -P ALL,{#COUNTER},%idle]</key>
-                            <delay>10m</delay>
-                            <history>90d</history>
-                            <trends>365d</trends>
+                            <delay>{$SAR_ZBX_POLL}</delay>
+                            <history>{$SAR_ZBX_HISTORY}</history>
+                            <trends>{$SAR_ZBX_TREND}</trends>
                             <status>0</status>
                             <value_type>0</value_type>
                             <allowed_hosts/>
@@ -9114,9 +9132,9 @@ Note: On SMP machines a processor that does not have any activity at all (0.00 f
                             <snmp_community/>
                             <snmp_oid/>
                             <key>sar.counter[u,ALL -P ALL,{#COUNTER},%iowait]</key>
-                            <delay>10m</delay>
-                            <history>90d</history>
-                            <trends>365d</trends>
+                            <delay>{$SAR_ZBX_POLL}</delay>
+                            <history>{$SAR_ZBX_HISTORY}</history>
+                            <trends>{$SAR_ZBX_TREND}</trends>
                             <status>0</status>
                             <value_type>0</value_type>
                             <allowed_hosts/>
@@ -9177,9 +9195,9 @@ Note: On SMP machines a processor that does not have any activity at all (0.00 f
                             <snmp_community/>
                             <snmp_oid/>
                             <key>sar.counter[u,ALL -P ALL,{#COUNTER},%irq]</key>
-                            <delay>10m</delay>
-                            <history>90d</history>
-                            <trends>365d</trends>
+                            <delay>{$SAR_ZBX_POLL}</delay>
+                            <history>{$SAR_ZBX_HISTORY}</history>
+                            <trends>{$SAR_ZBX_TREND}</trends>
                             <status>0</status>
                             <value_type>0</value_type>
                             <allowed_hosts/>
@@ -9237,9 +9255,9 @@ Note: On SMP machines a processor that does not have any activity at all (0.00 f
                             <snmp_community/>
                             <snmp_oid/>
                             <key>sar.counter[u,ALL -P ALL,{#COUNTER},%nice]</key>
-                            <delay>10m</delay>
-                            <history>90d</history>
-                            <trends>365d</trends>
+                            <delay>{$SAR_ZBX_POLL}</delay>
+                            <history>{$SAR_ZBX_HISTORY}</history>
+                            <trends>{$SAR_ZBX_TREND}</trends>
                             <status>0</status>
                             <value_type>0</value_type>
                             <allowed_hosts/>
@@ -9297,9 +9315,9 @@ Note: On SMP machines a processor that does not have any activity at all (0.00 f
                             <snmp_community/>
                             <snmp_oid/>
                             <key>sar.counter[u,ALL -P ALL,{#COUNTER},%soft]</key>
-                            <delay>10m</delay>
-                            <history>90d</history>
-                            <trends>365d</trends>
+                            <delay>{$SAR_ZBX_POLL}</delay>
+                            <history>{$SAR_ZBX_HISTORY}</history>
+                            <trends>{$SAR_ZBX_TREND}</trends>
                             <status>0</status>
                             <value_type>0</value_type>
                             <allowed_hosts/>
@@ -9357,9 +9375,9 @@ Note: On SMP machines a processor that does not have any activity at all (0.00 f
                             <snmp_community/>
                             <snmp_oid/>
                             <key>sar.counter[u,ALL -P ALL,{#COUNTER},%steal]</key>
-                            <delay>10m</delay>
-                            <history>90d</history>
-                            <trends>365d</trends>
+                            <delay>{$SAR_ZBX_POLL}</delay>
+                            <history>{$SAR_ZBX_HISTORY}</history>
+                            <trends>{$SAR_ZBX_TREND}</trends>
                             <status>0</status>
                             <value_type>0</value_type>
                             <allowed_hosts/>
@@ -9417,9 +9435,9 @@ Note: On SMP machines a processor that does not have any activity at all (0.00 f
                             <snmp_community/>
                             <snmp_oid/>
                             <key>sar.counter[u,ALL -P ALL,{#COUNTER},%sys]</key>
-                            <delay>10m</delay>
-                            <history>90d</history>
-                            <trends>365d</trends>
+                            <delay>{$SAR_ZBX_POLL}</delay>
+                            <history>{$SAR_ZBX_HISTORY}</history>
+                            <trends>{$SAR_ZBX_TREND}</trends>
                             <status>0</status>
                             <value_type>0</value_type>
                             <allowed_hosts/>
@@ -9477,9 +9495,9 @@ Note: On SMP machines a processor that does not have any activity at all (0.00 f
                             <snmp_community/>
                             <snmp_oid/>
                             <key>sar.counter[u,ALL -P ALL,{#COUNTER},%usr]</key>
-                            <delay>10m</delay>
-                            <history>90d</history>
-                            <trends>365d</trends>
+                            <delay>{$SAR_ZBX_POLL}</delay>
+                            <history>{$SAR_ZBX_HISTORY}</history>
+                            <trends>{$SAR_ZBX_TREND}</trends>
                             <status>0</status>
                             <value_type>0</value_type>
                             <allowed_hosts/>
@@ -9570,6 +9588,9 @@ Note: On SMP machines a processor that does not have any activity at all (0.00 f
                     <ssl_key_password/>
                     <verify_peer>0</verify_peer>
                     <verify_host>0</verify_host>
+                    <lld_macro_paths/>
+                    <preprocessing/>
+                    <master_item/>
                 </discovery_rule>
             </discovery_rules>
             <httptests/>
@@ -9592,7 +9613,7 @@ Note: On SMP machines a processor that does not have any activity at all (0.00 f
                 </macro>
                 <macro>
                     <macro>{$SAR_CPU_LAT_CONST_SCHED_MIN_GRANULARITY_NS}</macro>
-                    <value>10000000</value>
+                    <value>3000000</value>
                 </macro>
                 <macro>
                     <macro>{$SAR_CPU_LAT_HIGH_MS}</macro>
@@ -9698,9 +9719,22 @@ Note: On SMP machines a processor that does not have any activity at all (0.00 f
                     <macro>{$SAR_TEMP_CRIT}</macro>
                     <value>60</value>
                 </macro>
+                <macro>
+                    <macro>{$SAR_ZBX_HISTORY}</macro>
+                    <value>30d</value>
+                </macro>
+                <macro>
+                    <macro>{$SAR_ZBX_POLL}</macro>
+                    <value>10m</value>
+                </macro>
+                <macro>
+                    <macro>{$SAR_ZBX_TREND}</macro>
+                    <value>365d</value>
+                </macro>
             </macros>
             <templates/>
             <screens/>
+            <tags/>
         </template>
     </templates>
     <triggers>

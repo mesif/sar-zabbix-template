@@ -78,7 +78,7 @@ Follow these few steps:
     <<<<    53 23 * * * root /usr/lib64/sa/sa2 -A
     >>>>    58 23 * * * root /usr/lib64/sa/sa2 -A
     
-    Then you should change update interval for every item in the template.
+    Then you should change macro {$SAR_ZBX_POLL} update interval for items in the template.
 
 Now you are ready to import sar_zabbix_template.xml into your Zabbix.
 
